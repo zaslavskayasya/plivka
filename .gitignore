@@ -1,2 +1,6 @@
-node_modules/
-dist/
+# dependencies
+/node_modules
+/screens
+/.pnp
+.pnp.js
+

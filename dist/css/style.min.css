@@ -1,0 +1,2 @@
+:where(:not(iframe,canvas,img,svg,video):not(svg *)){all:unset;display:revert}*,:after,:before{box-sizing:border-box}a,button{cursor:pointer}ol,ul{list-style:none}img{max-width:100%;vertical-align:bottom}table{border-collapse:collapse}textarea{white-space:revert}html{font-size:100%}body{color:#000;font-family:Helvetica Neue,Helvetica,Hiragino Sans,Hiragino Kaku Gothic ProN,Arial,Yu Gothic,Meiryo,sans-serif;font-size:1rem;font-weight:500}
+/*# sourceMappingURL=style.min.css.map */
