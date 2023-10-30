@@ -1,12 +1,13 @@
-@use '../helpers' as h;
 
-html {
-  font-size: 100%;
-}
+$base-color: #262626;
+$accent-color: #3A55C1;
 
 body {
-  font-family: h.$font-family;
-  font-weight: 500;
-  font-size: h.rem(16);
-  color: h.$primary-color;
+  font-family: 'Montserrat', sans-serif;
+  // font-weight: 500;
+  font-size: 62.5%;
+  background-color: #F5F5F7;
+  // font-size: 100%;
+  color: $base-color;
 }
+

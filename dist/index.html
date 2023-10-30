@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="uk">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,12 +22,42 @@
     <title>Document</title>
     <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
     <link rel="icon" type="image/png" href="/icon-192x192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <header class="l-header"></header>
-    <main class="l-main"></main>
+    <header class="header">
+      <div class="main-header">
+        <div class="menu-logo"><a class="logo-part" href="#"> <img src="../img/logo.png" alt="bright"></a>
+          <nav class="nav">
+            <ul class="nav-ul">
+              <li class="nav-li"><a class="nav-link" href="#"> Про нас</a></li>
+              <li class="nav-li dropdown"><a class="nav-link" href="#">Продукти</a>
+                <ul class="dropdown-content">
+                  <li class="nav-li"><a class="nav-link" href="#">Продукт1</a></li>
+                  <li class="nav-li"><a class="nav-link" href="#">Продукт2</a></li>
+                </ul>
+              </li>
+              <li class="nav-li"><a class="nav-link" href="#"> Film Cut</a></li>
+              <li class="nav-li"><a class="nav-link" href="#"> Співпраця</a></li>
+              <li class="nav-li"><a class="nav-link" href="#"> Навчання</a></li>
+              <li class="nav-li"><a class="nav-link" href="#"> Контакти</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="other-info"> <a class="phone-button" href="tel:0970461237"> <img src="../img/icons/phone.svg" alt=""></a>
+          <div class="menu-lines"> <img src="../img/icons/menu.svg" alt="menu"></div>
+        </div>
+      </div>
+    </header>
+    <main class="l-main">
+      <h1>test </h1>
+      <h2>test </h2>
+      <p>test</p>
+    </main>
     <footer class="l-footer"></footer>
   </body>
 </html>

@@ -12,9 +12,9 @@ const imgTask = () => {
     .pipe(
       imagemin([
         pngquant({
-          quality: [0.7, 0.85]
+          quality: [0.85, 0.95]
         }),
-        imagemin.mozjpeg({ quality: 80, progressive: true }),
+        imagemin.mozjpeg({ quality: 95, progressive: true }),
         imagemin.optipng(),
         imagemin.svgo({
           plugins: [{ removeViewBox: false }, { cleanupIDs: false }]
