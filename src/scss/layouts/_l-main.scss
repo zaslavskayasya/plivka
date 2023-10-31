@@ -1,2 +1,205 @@
-.l-main {
+@use "../foundation/base" as b;
+
+.main-content{
+    background-image: url('../img/illustrations/main-min.png');
+    background-size: cover;    
+    padding-left: 26px;
+    padding-top: 92px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 5;
+}
+
+
+.h1-mega{
+    color: #FFF;
+    font-family: inherit;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 116.5%; /* 34.95px */
+    text-transform: uppercase;
+    max-width: 90%;
+    margin-bottom: 10px;
+}
+
+
+.main-subheader{
+    color: #FFF;
+    font-family: inherit;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 24.3px */
+    margin-bottom: 20px;
+}
+
+.micro-subheader{
+    color: #FFF;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%; /* 18.9px */
+    margin-bottom: 80px;
+}
+
+.main-links{
+    color: #FFF;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%; /* 18.9px */
+    margin-bottom: 24px;
+    text-decoration: none;
+    position: relative;
+    width: fit-content;
+    &:after{
+        content: "";
+        width:7px;
+        height: 10px; 
+        position: absolute;
+        background: url('../img/icons/arr-right.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: -25px;
+        top: 5px;
+        transition: all ease 0.3s;
+    }
+    &:hover{
+        &:after{
+            right: -40px;
+        }
+    }
+    &-wrap{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.social-media-block, .langs-block, .mail-link{
+    display: none;
+}
+
+.bottom-part{
+    background-color: #fff;
+    padding: 50px 0px;
+    .h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .bold-gray-text{
+        max-width: 90%;
+        margin: 0 auto 36px;
+    }
+    .button{
+        margin: 0 auto 50px;
+    }
+}
+
+
+
+@media screen and (min-width: 760px){
+    .main-content {
+        background-image: url(../img/illustrations/main.png);
+        padding-left: 85px;
+        padding-top: 130px;;
+    }
+    .h1-mega{
+        font-size: 40px
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .main-content {
+        padding-left: 257px;
+        padding-top: 133px;
+    }
+    .h1-mega{
+        font-size: 70px;
+        margin-bottom: 40px;
+    }
+    .main-subheader{
+        font-size: 2.2rem;
+    }
+    .micro-subheader{
+        font-size: 1.8rem;;
+        max-width: 400px;;
+        font-weight: 400;
+    }
+    .main-links-wrap{
+        flex-direction: row;
+    }
+    .main-links{
+        margin-right: 75px;
+    }
+    .social-media-block{
+        display: block;
+        position: absolute;
+        left: -62px;
+        top: -15px;
+    }
+    .social-media{
+        &-li{
+            margin-bottom: 22px;
+        }
+        &-link{
+            width: 24px;
+            height: 24px;
+            display: block;
+            img{
+                width: 100%;
+                transition: all ease 0.3s;
+            }
+            &:hover{
+                img{
+                    opacity: 0.7;
+                } 
+            }    
+        }
+    }   
+    .langs{
+        &-block{
+            display: block;
+            position: absolute;
+            right: -40px;
+            top: -15px;
+        }
+        &-item{
+            margin-bottom: 1px;
+        }
+        &-link{
+            color: b.$lighten-color;
+            font-family: inherit;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 135%; /* 21.6px */
+            text-transform: uppercase;
+            text-decoration: none;
+            &:hover{
+                color: b.$base-color;
+
+            }
+        }
+    }
+    .mail-link{
+        display: block;
+        position: absolute;
+        right: -40px;
+        bottom: 0px; 
+        transform: rotate(-180deg);
+        writing-mode: vertical-rl;
+        color: b.$base-color;
+        font-family: inherit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 135%; /* 21.6px */
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }

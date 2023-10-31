@@ -1,4 +1,4 @@
-header.header 
+header.header.big-container 
     .main-header 
         .menu-logo
             a(href="#").logo-part 
@@ -6,9 +6,9 @@ header.header
             nav.nav 
                 ul.nav-ul 
                     li.nav-li
-                        a(href="#").nav-link  Про нас
+                        a(href="#").nav-link.active  Про нас
                     li.nav-li.dropdown
-                        a(href="#").nav-link Продукти
+                        a(href="#").nav-link.dropdown-link Продукти
                         ul.dropdown-content
                             li.nav-li
                                 a(href="#").nav-link Продукт1
@@ -23,8 +23,9 @@ header.header
                     li.nav-li
                         a(href="#").nav-link  Контакти
         .other-info                  
-            a(href="tel:0970461237").phone-button   
-                img(src="../img/icons/phone.svg", alt="")
+            a(href="tel:+48881928014").phone-button   
+                img(src="../img/icons/phone.svg", alt="phone").phone-icon
+                span +48 881 928014
             .menu-lines 
                 img(src="../img/icons/menu.svg", alt="menu")
 
