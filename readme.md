@@ -1,13 +1,6 @@
 ## Plivka na avto
 Web-site project
 
-# Installation  
-```bash
-$ git clone https://github.com/Minaki-web/boilerplate  
-$ npm i  
-$ npm start
-```
-
 # Commands  
 | Command           | Description                          |
 | ----------------- | ------------------------------------ |
