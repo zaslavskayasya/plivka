@@ -153,52 +153,46 @@ $(document).ready(function(){
 });
 
 
+const headerElement = document.querySelector('.header');
+const mainScreen = document.querySelector('.l-main');
+
+const headerHeight = headerElement.offsetHeight;
+const mainHeight = mainScreen.offsetHeight;
+
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+  console.log(headerHeight)
+  let scrollDistanse = window.scrollY;
+
+  // if(scrollDistanse >= mainHeight + headerHeight){
+  //   headerElement.classList.add('sticky');
+  //   mainHeight.style.marginTop = `${headerHeight}px`;
+  // } else {
+  //   headerElement.classList.remove('sticky');
+  //   mainHeight.style.marginTop = null;
+  // }
 
 
-// let prevScrollPos = window.scrollTop;
-
-// window.onscroll = function () {
-//   const currentScrollPos = window.scrollTop;
-
-//   if (prevScrollPos > currentScrollPos) {
-//     // Скролимо вгору
-//     document.querySelector(".header").classList.remove('sticky');
-//     document.querySelector(".header").style.top = "0";
-//     // document.querySelector(".header").style.top = "0";
-//   } else {
-//     // Скролимо вниз
-//     document.querySelector(".header").classList.add('sticky');
-//     // document.querySelector(".header").style.top = "-50px"; // Змініть це значення на висоту вашої шапки
-//   }
-
-//   prevScrollPos = currentScrollPos;
-// };
-
-
-let prevScrollPos = window.scrollY;
-const scrollThreshold = 400; // Відстань для активації функції скролла
-
-window.onscroll = function () {
-  const currentScrollPos = window.scrollY;
-
-  if (prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > scrollThreshold) {
-    // Скролимо вгору на відстань більше 400 пікселів
-    // document.querySelector(".header").style.top = "0";
-    document.querySelector(".header").classList.remove('.sticky');
-  } else if (currentScrollPos - prevScrollPos > scrollThreshold) {
-    // Скролимо вниз на відстань більше 400 пікселів
-    document.querySelector(".header").classList.add('.sticky');
-    // document.querySelector(".header").style.top = "-50px"; // Змініть це значення на висоту вашої шапки
+  if(scrollDistanse > lastScrollTop){
+    headerElement.classList.add('hidden');
+    headerElement.classList.remove('sticky');
+    // headerElement.classList.remove('sticky');
+    // mainHeight.style.marginTop = 0;
+  } else {
+    headerElement.classList.remove('hidden');
+    headerElement.classList.add('sticky');
+    // headerElement.classList.add('sticky');
+    // mainScreen.style.marginTop = headerHeight ;
   }
 
-  prevScrollPos = currentScrollPos;
-};
+  if(scrollDistanse === 0){
+    headerElement.classList.remove('sticky', 'hidden');
+    // headerElement.classList.remove('sticky');
+    // mainScreen.style.marginTop = 0;
+  }
 
+   lastScrollTop = scrollDistanse;
 
-
-
-// Опціонально: можливо, вам також потрібно буде налаштувати початковий стан шапки при завантаженні сторінки
-// window.onload = function () {
-//   document.querySelector(".header").style.top = "0";
-// };
+})
 //# sourceMappingURL=main.js.map
