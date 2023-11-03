@@ -1,17 +1,12 @@
-console.log(`Loaded mrain.js`);
 
 let menuButton = document.querySelector('.menu-lines');
 let navigation = document.querySelector('.nav');
-
-console.log(menuButton);
-console.log(navigation);
 
 menuButton.addEventListener("click", ()=> {
     navigation.classList.toggle('active');
 })
 
-// свайп
-
+// menu swipe
 let menuOpen = false;
 let touchStartX = 0;
 let touchEndX = 0;
@@ -29,28 +24,23 @@ function toggleMenu() {
 function handleTouchStart(event) {
     touchStartX = event.touches[0].clientX; 
 }
-  
-  // Обробник події для обробки закінчення касання (та визначення кінцевої координати X).
+    
   function handleTouchEnd(event) {
-    touchEndX = event.changedTouches[0].clientX;    
-    // Визначте різницю між початковою та кінцеою координатою X.
-    const deltaX = touchEndX - touchStartX;  
-    // Якщо рух був достатньо великим, викличте функцію toggleMenu для відкриття або закриття меню.
+    touchEndX = event.changedTouches[0].clientX;  
+    const deltaX = touchEndX - touchStartX;
     if (Math.abs(deltaX) > 50) {
       toggleMenu();
     }
   }
 
-// Додайте обробники подій для касання на контенті.
+
 document.addEventListener('touchstart', handleTouchStart);
 document.addEventListener('touchend', handleTouchEnd);
 
 
-// 
+// margin for container width full width
 let containerWithNoEnd = document.querySelectorAll('.container-no-end');
-
 let sourceContainer = document.querySelector('.container');
-
 
 const makeMargin = () => {
   const offsetLeftOfContainer = sourceContainer.offsetLeft;
@@ -63,6 +53,9 @@ const makeMargin = () => {
 makeMargin();
 
 window.onresize = makeMargin;
+
+
+/// sliders settings
 
 
 $(document).ready(function(){
@@ -121,7 +114,6 @@ $(document).ready(function(){
 	});
 
   $('.slider-main').slick({
-    // variableWidth: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -137,7 +129,6 @@ $(document).ready(function(){
     asNavFor: '.slider-main',
     focusOnSelect: true,
     touchMove:true,
-    // centerMode: true,
     responsive: [{
       breakpoint: 1460,
       settings: {
@@ -145,13 +136,14 @@ $(document).ready(function(){
         verticalSwiping: false,
         slidesToScroll: 1,
         slidesToShow: 3,
-        // centerMode: true,
       }
     }]
   });
 
 });
 
+
+// hide/show hwader
 
 const headerElement = document.querySelector('.header');
 const mainScreen = document.querySelector('.l-main');
@@ -162,37 +154,38 @@ const mainHeight = mainScreen.offsetHeight;
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
-  console.log(headerHeight)
+
   let scrollDistanse = window.scrollY;
-
-  // if(scrollDistanse >= mainHeight + headerHeight){
-  //   headerElement.classList.add('sticky');
-  //   mainHeight.style.marginTop = `${headerHeight}px`;
-  // } else {
-  //   headerElement.classList.remove('sticky');
-  //   mainHeight.style.marginTop = null;
-  // }
-
 
   if(scrollDistanse > lastScrollTop){
     headerElement.classList.add('hidden');
     headerElement.classList.remove('sticky');
-    // headerElement.classList.remove('sticky');
-    // mainHeight.style.marginTop = 0;
   } else {
     headerElement.classList.remove('hidden');
     headerElement.classList.add('sticky');
-    // headerElement.classList.add('sticky');
-    // mainScreen.style.marginTop = headerHeight ;
   }
 
   if(scrollDistanse === 0){
     headerElement.classList.remove('sticky', 'hidden');
-    // headerElement.classList.remove('sticky');
-    // mainScreen.style.marginTop = 0;
   }
 
    lastScrollTop = scrollDistanse;
 
 })
+
+// animation
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+}
+let options = { threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+for (let elm of elements) {
+  observer.observe(elm);
+}
 //# sourceMappingURL=main.js.map
