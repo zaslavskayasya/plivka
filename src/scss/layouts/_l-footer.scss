@@ -1,2 +1,98 @@
-.l-footer {
+.footer{
+    background-color: #EFEFEF;
+    padding: 50px 0px;
+}
+.footer-container{
+    max-width: 300px;
+    margin: 0 auto;
+    .logo{
+        max-width: 157px;
+        height: 42px;
+        margin: 0 auto 50px;
+        box-sizing: border-box;
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+    .social{
+        &-link-list{
+            max-width: 170px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto 50px;
+        }
+        &-link{
+            width: 25px;
+            height: 25px;
+            display: block;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+
+    }
+}
+
+.footer-nav{
+    list-style: none;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    .footer-li{
+        margin-bottom: 30px;
+        width: 49%;
+        text-align: center;
+    }
+    .footer-link{
+        color: #111;
+        text-align: center;
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (min-width: 760px){
+    .footer-container {
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+    }
+    .footer-container .logo{
+        margin-left: 0px;
+    }
+    .footer-container .social-link-list{
+        width: 147px;
+        margin-bottom: 0px;
+        margin-left: 0px;;
+    }
+    .footer-container .logo{
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 1460px){
+    .footer-container{
+        width: 1364px;
+    }
+    .footer-nav .footer-li{
+        width: fit-content;
+        margin-right: 50px;;
+        margin-bottom: 0px;;
+    }
+    .footer{
+        padding-bottom: 80px;
+    }
+
 }

@@ -292,6 +292,201 @@
         margin-bottom: 67px;
     }
 }
+.blue-section .norm-gray-text , .no-end-wrap .norm-gray-text{
+    margin-bottom: 60px ;
+}
+
+.adress{
+    &-list{
+        margin-bottom: 20px;
+    }
+    &-li{
+        display: flex;
+        margin-bottom: 21px;
+        position: relative;
+
+    }
+    &-img-wrap{
+        width: 20px;
+        height: 20px;
+        margin-right: 24px ;
+        img, svg{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-link{
+        color: #111;
+        font-family: inherit;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;  
+        &:hover{
+            text-decoration: underline;
+        }      
+    }
+
+
+}
+
+
+/// *******  FORM   ******* ///
+
+.form-part{
+    padding-top: 30px;
+    button{
+        width: 90%;
+        margin: 0 auto;    
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+    
+    label, input{
+        color: #676573;
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    label{
+        margin-bottom: 10px;;
+    }
+    input, textarea{
+        padding: 20px 16px 16px 16px;
+        border: 2px solid #C4C4C4;
+        box-sizing: border-box;
+    }
+  }
+  
+  input::placeholder,
+  textarea::placeholder{
+    color: #D1D1D1;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+.form-group {
+    margin-bottom: 18px;
+}
+.button{
+    margin-top: 26px;
+}
+/* Customize the label (the container) */
+.check-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 2px solid #095CD9 ;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .check-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .check-container input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .check-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+ .check-container .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(65, 64, 64);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.text-agree{
+    color: #111;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 195.9%; /* 31.344px */
+    padding-left: 45px;
+    a{
+        color: #095CD9;
+        &:hover{
+        text-decoration: underline;
+        }
+    }
+
+}
+
+
+.partner-section{
+    background-color: #EFEFEF;
+    position: relative;
+    padding-top: 30px;
+    .two-cols{
+        margin-bottom: 0px;
+        padding-bottom: 50px;;
+    }
+}
+
 
 
 
@@ -580,19 +775,6 @@
     .sliders-wrap{
         display: flex;
         position: relative;
-        // .slider-main{
-        //    width: 550px!important;
-        //    height: 520px;
-        //    .item {
-        //     width: 550px!important;
-        //     height: 520px;
-        //        img{
-        //             width: 100%;
-        //             height: 100%;
-        //             object-fit: cover;
-        //        }
-        //    }
-        // }
         .slider-nav{
             width: 100px;
             top: 15%;
@@ -657,6 +839,7 @@
         }
      }
      .slid-text-section{
+        margin-bottom: 170px;;
 
         .two-cols .col {
             width:55%;
@@ -673,29 +856,77 @@
             }
         }
     }
-    // .slid-text-section{
-    //     .h2 {
-    //         margin-bottom: 27px;
-    //     }
-    //     .two-cols .col {
-    //         width: 53%;
-    //     }
-    //     .two-cols .col.text-col {
-    //         width: 36%;
-    //         padding-top: 75px;
-    //         .subheader-text{
-    //             font-size: 2.8rem;
-    //             margin-bottom: 46px;
-    //         }
-    //         .big-gray-text{
-    //             font-size: 1.6rem;
-    //         }
-    //     }
-    // }
     .container {
         max-width: 1282px;
         padding: 0 15px 0 98px;
     }
+    // .form-group input, .form-group textarea{
+    //     margin-bottom: 40px;
+    // }
+    .form-group{
+        margin-bottom: 40px;;
+    }
+    .form-part button{
+        max-width: 260px;
+        margin-left: 0px;;
+    }
+    .adress-link{
+        font-size: 1.6rem;
+    }
+    .partner-section{
+        padding-top: 117px;
+        padding-bottom: 40px;
+        position: relative;
+        .standart-list {
+            color: #676573;
+            margin-bottom: 97px;
+            padding-left: 30px;
+            max-width: 68%;
+        }
+        h2{
+            margin-bottom: 35px;
+        }
+        .norm-gray-text.thin{
+           color: #676573;
+           font-weight: 500;
+           line-height: 203.9%;
+           max-width: 75%;;
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            top: -150px;
+            left: -250px;
+            width: 1238px;
+            height: 172px;
+            background-image: url('../img/illustrations/backcar.png');
+        }
+    }
+    .margin-bottom{
+        margin-bottom: 127px;
+    }
+    .adress-img-wrap{
+        width: 24px;
+        height: 24px;
+    }
+    .form-part{
+        max-width: 500px ;
+        align-self: right;
+        float: right;
+        padding-top: 32px;
+    }
+    .form-group input, .form-group textarea{
+        padding: 24px 16px 24px;
+        margin-bottom: 0px;;
+    }
+    .partner-section{
+        .two-cols{
+            padding-bottom: 150px;
+        }
+
+    }
+    
+
 }
 
 @media screen and (min-width: 1750px){
