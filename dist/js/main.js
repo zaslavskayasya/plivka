@@ -152,4 +152,53 @@ $(document).ready(function(){
 
 });
 
+
+
+
+// let prevScrollPos = window.scrollTop;
+
+// window.onscroll = function () {
+//   const currentScrollPos = window.scrollTop;
+
+//   if (prevScrollPos > currentScrollPos) {
+//     // Скролимо вгору
+//     document.querySelector(".header").classList.remove('sticky');
+//     document.querySelector(".header").style.top = "0";
+//     // document.querySelector(".header").style.top = "0";
+//   } else {
+//     // Скролимо вниз
+//     document.querySelector(".header").classList.add('sticky');
+//     // document.querySelector(".header").style.top = "-50px"; // Змініть це значення на висоту вашої шапки
+//   }
+
+//   prevScrollPos = currentScrollPos;
+// };
+
+
+let prevScrollPos = window.scrollY;
+const scrollThreshold = 400; // Відстань для активації функції скролла
+
+window.onscroll = function () {
+  const currentScrollPos = window.scrollY;
+
+  if (prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > scrollThreshold) {
+    // Скролимо вгору на відстань більше 400 пікселів
+    // document.querySelector(".header").style.top = "0";
+    document.querySelector(".header").classList.remove('.sticky');
+  } else if (currentScrollPos - prevScrollPos > scrollThreshold) {
+    // Скролимо вниз на відстань більше 400 пікселів
+    document.querySelector(".header").classList.add('.sticky');
+    // document.querySelector(".header").style.top = "-50px"; // Змініть це значення на висоту вашої шапки
+  }
+
+  prevScrollPos = currentScrollPos;
+};
+
+
+
+
+// Опціонально: можливо, вам також потрібно буде налаштувати початковий стан шапки при завантаженні сторінки
+// window.onload = function () {
+//   document.querySelector(".header").style.top = "0";
+// };
 //# sourceMappingURL=main.js.map
