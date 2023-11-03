@@ -190,6 +190,7 @@
     }
 }
 .no-end-wrap{
+    padding-right: 20px;
     .norm-gray-text {
         margin-bottom: 37px;;
     }
@@ -514,6 +515,10 @@
     .h1-mega{
         font-size: 40px;
     }
+    .col.text-col{
+        padding-top: 50px;;
+
+    }
 }
 
 
@@ -545,6 +550,16 @@
         padding-top: 50px;
         position: relative;
     }
+    .col.text-col{
+        padding-top: 0px;
+
+    }
+    .partner-section{
+        padding-top: 80px;
+    }
+    .sliders-wrap{
+    margin-bottom: 10px;;}
+
 }
 
 
@@ -754,6 +769,7 @@
     }
     .no-end-wrap{
      padding-top: 20px;
+     padding-right: 0px;;
      .norm-gray-text {
         line-height: 223%;
         margin-bottom: 79px;
