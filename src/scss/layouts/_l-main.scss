@@ -615,7 +615,7 @@
 
 @media screen and (min-width: 1460px){
     .main-content {
-        padding-left: 257px;
+        padding-left: 127px;
         padding-top: 133px;
         padding-bottom: 111px;
     }
@@ -952,6 +952,10 @@
 }
 
 @media screen and (min-width: 1750px){
+    .main-content {
+        padding-left: 257px;
+
+    }
     .bottom-part {
         padding: 66px 185px;
     }
