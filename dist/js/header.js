@@ -74,11 +74,15 @@ window.addEventListener('resize', ()=> {
 
 const headerElement = document.querySelector('.header');
 const mainScreen = document.querySelector('.l-main');
+const headerContainer = document.querySelector('.header-container');
 
 const headerHeight = headerElement.offsetHeight;
 const mainHeight = mainScreen.offsetHeight;
 
 let lastScrollTop = 0;
+console.log(headerElement.clientHeight);
+headerContainer.style.height = headerElement.clientHeight + "px";
+
 
 window.addEventListener('scroll', () => {
 
@@ -87,13 +91,17 @@ window.addEventListener('scroll', () => {
   if(scrollDistanse > lastScrollTop){
     headerElement.classList.add('hidden');
     headerElement.classList.remove('sticky');
+    // headerContainer.style.height = "0px"
   } else {
     headerElement.classList.remove('hidden');
     headerElement.classList.add('sticky');
+    // headerContainer.style.height = "auto"
   }
 
   if(scrollDistanse === 0){
     headerElement.classList.remove('sticky', 'hidden');
+    // headerContainer.style.height = "auto"
+
   }
 
    lastScrollTop = scrollDistanse;

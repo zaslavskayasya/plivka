@@ -2,14 +2,14 @@
 
 .header-container {
   position: relative;
-  height: 0;
   transition: all 0.4s ease;
 }
 
 .header-container .header {
   background-color: #f5f5f7;
   z-index: 9;
-  position: relative;
+  // position: relative;
+  transition: all 0.4s ease;
 }
 
 
