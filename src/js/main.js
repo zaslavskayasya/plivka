@@ -8,63 +8,42 @@ menuButton.addEventListener("click", ()=> {
 
 // menu swipe
 let menuOpen = false;
-// let touchStartX = 0;
-// let touchEndX = 0;
-
-
-// function toggleMenu() {
-//     if (menuOpen) {
-//         navigation.classList.remove('active');
-//     } else {
-//         navigation.classList.add('active');
-//     }
-//     menuOpen = !menuOpen;
-// }
-
-// function handleTouchStart(event) {
-//     touchStartX = event.touches[0].clientX; 
-// }
-    
-//   function handleTouchEnd(event) {
-//     touchEndX = event.changedTouches[0].clientX;  
-//     const deltaX = touchEndX - touchStartX;
-//     if (Math.abs(deltaX) > 50) {
-//       toggleMenu();
-//     }
-//   }
-
-// document.addEventListener('touchstart', handleTouchStart);
-// document.addEventListener('touchend', handleTouchEnd);
 
 let touchStartX = 0;
 let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+const threshold = 50; // Пороговое значение для срабатывания свайпа
 
-const elementO = document.querySelector('body'); // Замените 'yourElement' на идентификатор вашего элемента
+const elementO = document.querySelector('body'); 
 
 elementO.addEventListener('touchstart', function (e) {
   touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
 });
 
 elementO.addEventListener('touchend', function (e) {
   touchEndX = e.changedTouches[0].clientX;
+  touchEndY = e.changedTouches[0].clientY;
 
-  // Определяем направление свайпа
-  const swipeDistance = touchEndX - touchStartX;
+  //difference
+  const swipeDistanceX = touchEndX - touchStartX;
+  const swipeDistanceY = touchEndY - touchStartY;
 
-  if (swipeDistance > 0) {
-    navigation.classList.remove('active');
-  } else if (swipeDistance < 0) {
-    navigation.classList.add('active');
+  // check
+  if (Math.abs(swipeDistanceX) > threshold && Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY)) {
+    if (swipeDistanceX > 0) {
+      navigation.classList.add('active');
+    } else if (swipeDistanceX < 0) {
+      navigation.classList.remove('active');
+    }
+    menuOpen = !menuOpen;
   }
-  menuOpen = !menuOpen;
 });
 
 elementO.addEventListener('touchmove', function (e) {
-  // Предотвращаем скроллинг страницы при свайпе
   // e.preventDefault();
 });
-
-
 
 // margin for container width full width
 let containerWithNoEnd = document.querySelectorAll('.container-no-end');
@@ -112,8 +91,6 @@ chectSize();
 window.addEventListener('resize', ()=> {
   chectSize();
 });
-
-
 
 
 
