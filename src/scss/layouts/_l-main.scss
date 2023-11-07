@@ -5,8 +5,7 @@
 }
 
 
-.main-content{
-    background-image: url('../img/illustrations/main-min.png');
+.main-content{   
     background-size: cover;    
     padding-left: 26px;
     padding-top: 92px;
@@ -515,7 +514,7 @@
 
 @media screen and (min-width: 760px){    
     .main-content{
-        background-image: url(../img/illustrations/main.png);
+        // background-image: url(../img/illustrations/main.png);
         padding-left: 85px;
         padding-top: 130px;
     }    

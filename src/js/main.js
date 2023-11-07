@@ -8,34 +8,62 @@ menuButton.addEventListener("click", ()=> {
 
 // menu swipe
 let menuOpen = false;
+// let touchStartX = 0;
+// let touchEndX = 0;
+
+
+// function toggleMenu() {
+//     if (menuOpen) {
+//         navigation.classList.remove('active');
+//     } else {
+//         navigation.classList.add('active');
+//     }
+//     menuOpen = !menuOpen;
+// }
+
+// function handleTouchStart(event) {
+//     touchStartX = event.touches[0].clientX; 
+// }
+    
+//   function handleTouchEnd(event) {
+//     touchEndX = event.changedTouches[0].clientX;  
+//     const deltaX = touchEndX - touchStartX;
+//     if (Math.abs(deltaX) > 50) {
+//       toggleMenu();
+//     }
+//   }
+
+// document.addEventListener('touchstart', handleTouchStart);
+// document.addEventListener('touchend', handleTouchEnd);
+
 let touchStartX = 0;
 let touchEndX = 0;
 
+const elementO = document.querySelector('body'); // Замените 'yourElement' на идентификатор вашего элемента
 
-function toggleMenu() {
-    if (menuOpen) {
-        navigation.classList.remove('active');
-    } else {
-        navigation.classList.add('active');
-    }
-    menuOpen = !menuOpen;
-}
+elementO.addEventListener('touchstart', function (e) {
+  touchStartX = e.touches[0].clientX;
+});
 
-function handleTouchStart(event) {
-    touchStartX = event.touches[0].clientX; 
-}
-    
-  function handleTouchEnd(event) {
-    touchEndX = event.changedTouches[0].clientX;  
-    const deltaX = touchEndX - touchStartX;
-    if (Math.abs(deltaX) > 50) {
-      toggleMenu();
-    }
+elementO.addEventListener('touchend', function (e) {
+  touchEndX = e.changedTouches[0].clientX;
+
+  // Определяем направление свайпа
+  const swipeDistance = touchEndX - touchStartX;
+
+  if (swipeDistance > 0) {
+    navigation.classList.remove('active');
+  } else if (swipeDistance < 0) {
+    navigation.classList.add('active');
   }
+  menuOpen = !menuOpen;
+});
 
+elementO.addEventListener('touchmove', function (e) {
+  // Предотвращаем скроллинг страницы при свайпе
+  // e.preventDefault();
+});
 
-document.addEventListener('touchstart', handleTouchStart);
-document.addEventListener('touchend', handleTouchEnd);
 
 
 // margin for container width full width
@@ -53,6 +81,43 @@ const makeMargin = () => {
 makeMargin();
 
 window.onresize = makeMargin;
+
+/// header images 
+const backElelementWithBackground = document.querySelector('[data-image]');
+
+let resizeWindowImage = function(){
+  const imageResponsive = backElelementWithBackground.getAttribute('data-responsive');
+  backElelementWithBackground.style.backgroundImage = `url(${imageResponsive})`;
+}
+
+let pastImage = function(){
+  if (backElelementWithBackground) {
+    const imageUrl = backElelementWithBackground.getAttribute('data-image');
+    backElelementWithBackground.style.backgroundImage = `url(${imageUrl})`;
+  } else {
+    console.error('Элемент с data-атрибутом "data-image" не найден.');
+  }
+}
+
+let chectSize = function(){
+  if(window.width < 760){
+    pastImage()
+  } else {
+    resizeWindowImage()
+  }
+}
+
+chectSize();
+
+window.addEventListener('resize', ()=> {
+  chectSize();
+});
+
+
+
+
+
+
 
 
 /// sliders settings
