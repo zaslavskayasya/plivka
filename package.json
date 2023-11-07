@@ -14,9 +14,9 @@
   "keywords": ["bolerplate", "pug", "sass"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Minaki-web/boilerplate"
+    "url": ""
   },
-  "author": "Minaki-web",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.3.5",

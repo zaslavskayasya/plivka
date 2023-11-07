@@ -26,7 +26,6 @@ const watchTask = (done) => {
   watch(path.src.scss, scssTask);
   watch(path.src.js, jsTask);
   watch(['src/*.*'], copyFile);
-
   done();
 };
 
