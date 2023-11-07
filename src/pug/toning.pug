@@ -1,0 +1,14 @@
+extends ./helpers/layout/_layout
+
+block value
+  - const path = ".";
+  - const toning = true;
+
+block header
+  include components/header/_header
+
+block main
+  include components/main/_toning
+
+block footer
+  include components/footer/_footer
