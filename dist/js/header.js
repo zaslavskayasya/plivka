@@ -1,8 +1,22 @@
+
+let menuButton = document.querySelector('.menu-lines');
+let navigation = document.querySelector('.nav');
+
+menuButton.addEventListener("click", ()=> {
+    navigation.classList.toggle('active');
+})
+
+// menu swipe
+let menuOpen = false;
+
+
+
 let touchStartX = 0;
 let touchEndX = 0;
 let touchStartY = 0;
 let touchEndY = 0;
 const threshold = 50; // Пороговое значение для срабатывания свайпа
+
 
 const elementO = document.querySelector('body'); // Замените 'yourElement' на идентификатор вашего элемента
 
@@ -22,19 +36,13 @@ elementO.addEventListener('touchend', function (e) {
   // Проверяем, что свайп горизонтальный и его длина больше порогового значения
   if (Math.abs(swipeDistanceX) > threshold && Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY)) {
     if (swipeDistanceX > 0) {
-      navigation.classList.remove('active');
-    } else if (swipeDistanceX < 0) {
       navigation.classList.add('active');
+    } else if (swipeDistanceX < 0) {
+      navigation.classList.remove('active');
     }
     menuOpen = !menuOpen;
   }
 });
-
-elementO.addEventListener('touchmove', function (e) {
-  // Предотвращаем скроллинг страницы при свайпе
-  e.preventDefault();
-});
-
 
 
 /// header images 
