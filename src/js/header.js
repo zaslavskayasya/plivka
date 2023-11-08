@@ -9,16 +9,14 @@ menuButton.addEventListener("click", ()=> {
 // menu swipe
 let menuOpen = false;
 
-
-
 let touchStartX = 0;
 let touchEndX = 0;
 let touchStartY = 0;
 let touchEndY = 0;
-const threshold = 50; // Пороговое значение для срабатывания свайпа
+const threshold = 50; 
 
 
-const elementO = document.querySelector('body'); // Замените 'yourElement' на идентификатор вашего элемента
+const elementO = document.querySelector('body');
 
 elementO.addEventListener('touchstart', function (e) {
   touchStartX = e.touches[0].clientX;
@@ -29,11 +27,11 @@ elementO.addEventListener('touchend', function (e) {
   touchEndX = e.changedTouches[0].clientX;
   touchEndY = e.changedTouches[0].clientY;
 
-  // Вычисляем разницу по горизонтали и вертикали
+  
   const swipeDistanceX = touchEndX - touchStartX;
   const swipeDistanceY = touchEndY - touchStartY;
 
-  // Проверяем, что свайп горизонтальный и его длина больше порогового значения
+  
   if (Math.abs(swipeDistanceX) > threshold && Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY)) {
     if (swipeDistanceX > 0) {
       navigation.classList.add('active');
@@ -88,7 +86,6 @@ const headerHeight = headerElement.offsetHeight;
 const mainHeight = mainScreen.offsetHeight;
 
 let lastScrollTop = 0;
-console.log(headerElement.clientHeight);
 headerContainer.style.height = headerElement.clientHeight + "px";
 
 
@@ -99,25 +96,19 @@ window.addEventListener('scroll', () => {
   if(scrollDistanse > lastScrollTop){
     headerElement.classList.add('hidden');
     headerElement.classList.remove('sticky');
-    // headerContainer.style.height = "0px"
   } else {
     headerElement.classList.remove('hidden');
     headerElement.classList.add('sticky');
-    // headerContainer.style.height = "auto"
   }
 
   if(scrollDistanse === 0){
     headerElement.classList.remove('sticky', 'hidden');
-    // headerContainer.style.height = "auto"
-
   }
 
-   lastScrollTop = scrollDistanse;
-
+  lastScrollTop = scrollDistanse;
 })
 
 // animation
-
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {

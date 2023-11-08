@@ -20,8 +20,8 @@
     <meta property="fb:admins" content="">
     <meta property="fb:app_id" content="">
     <title>Document</title>
-    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/icon-192x192.png">
+    <link rel="apple-touch-icon" type="image/png" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -102,27 +102,27 @@
             <div class="form-part element-animation">
               <form id="contact-form" onsubmit="return validateForm(event)">
                 <div class="form-group">
-                  <input type="text" id="name" name="phone" placeholder="Назва компанії" required><span class="error-message" id="name-error"> </span>
+                  <input type="text" id="name" name="phone" placeholder="Назва компанії" aria-label="Nazwa firmy" required><span class="error-message" id="name-error"> </span>
                 </div>
                 <div class="form-group">
-                  <input type="email" id="mail" name="phone" placeholder="Електронна пошта" required><span class="error-message" id="mail-error"> </span>
+                  <input type="email" id="mail" name="phone" placeholder="Електронна пошта" aria-label="E-mail" required><span class="error-message" id="mail-error"> </span>
                 </div>
                 <div class="form-group">
-                  <input type="tel" id="phone" name="phone" placeholder="Контактний телефон" pattern="[0-9]{10}" required>
+                  <input type="tel" id="phone" name="phone" placeholder="Контактний телефон" aria-label="Telefoniczny numer kontaktowy" pattern="[0-9]{10}" required>
                 </div>
                 <div class="form-group">
                   <label class="check-container">
-                    <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+                    <input class="checkbox" type="checkbox" aria-label="wyrażasz zgodę na naszą politykę prywatności."><span class="checkmark"></span>
                   </label>
                   <p class="text-agree"> Відправляючи форму, ви погоджуєтесь з нашою <a href="#">політикою конфіденційності. </a></p>
                 </div>
                 <div class="form-group">
                   <label class="check-container">
-                    <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+                    <input class="checkbox" type="checkbox" aria-label="Podałem prawdziwy numer identyfikacyjny podatnika mojej firmy."><span class="checkmark"></span>
                   </label>
                   <p class="text-agree"> Я приватний підприємець. Я ввів реальний ідентифікаційний номер платника податків моєї компанії. </p>
                 </div>
-                <button class="button button-blue" type="submit">Надіслати</button>
+                <button class="button button-blue" type="submit" title="wyślij formularz">Надіслати</button>
               </form>
             </div>
           </div>

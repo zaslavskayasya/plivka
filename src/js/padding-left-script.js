@@ -2,7 +2,7 @@
 let containerWithNoEnd = document.querySelectorAll('.container-no-end');
 let sourceContainer = document.querySelector('.container');
 
-console.log(sourceContainer);
+// console.log(sourceContainer);
 
 const makeMargin = () => {
   const offsetLeftOfContainer = sourceContainer.offsetLeft;
