@@ -8,12 +8,15 @@
 .main-content{   
     background-size: cover;    
     padding-left: 26px;
-    padding-top: 92px;
-    padding-bottom: 68px;    
+    padding-top: 29px ;
     position: relative;
     z-index: 5;
+    padding-bottom: 68px;  
 }
-
+.main-content.main-page{
+    padding-top: 92px;
+    padding-bottom: 162px;    
+}
 
 .h1-mega{
     color: #FFF;
@@ -519,9 +522,13 @@
     .main-content{
         // background-image: url(../img/illustrations/main.png);
         padding-left: 85px;
-        padding-top: 130px;
+        padding-top: 128px;
         padding-right: 30px;
     }    
+    .main-content.main-page{
+        padding-top: 130px;
+         
+    }
     .h1-mega{
         font-size: 40px;
     }
@@ -624,6 +631,10 @@
         padding-bottom: 111px;
         padding-right: 50px;
     }
+    .main-content.main-page{
+        padding-top: 133px;
+    }
+
     .h1-mega{
         font-size: 70px;
         margin-bottom: 40px;
