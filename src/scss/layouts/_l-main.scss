@@ -104,6 +104,7 @@
     }
     .button{
         margin: 0 auto 0px;
+        width: 240px;
     }
 }
 
@@ -205,6 +206,7 @@
     background-color: #DBE3EF;
     padding-top: 47px;
     margin-bottom: 100px;
+    overflow: hidden;
     .norm-gray-text{
         margin-bottom: 40px;
         max-width: 90%;
@@ -596,6 +598,7 @@
       }
       .bottom-part .button {
         margin: 0px;
+        width: auto;
       }
       .information-block{
         margin-bottom: 171px;

@@ -237,6 +237,7 @@ a{
   border: 1px solid $accent-color;
   cursor: pointer;
   transition: all ease-in-out 0.3s;
+  box-sizing: border-box;
   &-empty{
     border: 1px solid $second-accent;
     color: $second-accent;
