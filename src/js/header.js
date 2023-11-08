@@ -72,6 +72,7 @@ chectSize();
 
 window.addEventListener('resize', ()=> {
   chectSize();
+
 });
 
 
@@ -87,6 +88,11 @@ const mainHeight = mainScreen.offsetHeight;
 
 let lastScrollTop = 0;
 headerContainer.style.height = headerElement.clientHeight + "px";
+
+window.addEventListener('resize', ()=> {
+  const headerHeight = headerElement.offsetHeight;
+  headerContainer.style.height = headerElement.clientHeight + "px";
+});
 
 
 window.addEventListener('scroll', () => {
