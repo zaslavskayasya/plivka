@@ -11,7 +11,11 @@
     "reset": "npx gulp reset",
     "reset:img": "npx gulp resetImg"
   },
-  "keywords": ["bolerplate", "pug", "sass"],
+  "keywords": [
+    "bolerplate",
+    "pug",
+    "sass"
+  ],
   "repository": {
     "type": "git",
     "url": ""
@@ -35,6 +39,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-terser": "^2.0.1",
+    "gulp-webp": "^5.0.0",
     "imagemin-pngquant": "^9.0.2",
     "postcss": "^8.3.7",
     "postcss-sort-media-queries": "^4.1.0",
@@ -44,5 +49,8 @@
     "last 1 version",
     "IE 11",
     "> 1%"
-  ]
+  ],
+  "dependencies": {
+    "img-webp-converter": "^1.0.1"
+  }
 }
