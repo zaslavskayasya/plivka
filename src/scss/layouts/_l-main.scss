@@ -9,7 +9,7 @@
     background-size: cover;    
     padding-left: 26px;
     padding-top: 92px;
-    padding-bottom: 68px;
+    padding-bottom: 68px;    
     position: relative;
     z-index: 5;
 }
@@ -479,15 +479,17 @@
 
 
 .partner-section{
-    background-color: #EFEFEF;
+    background-color: b.$background-color;
     position: relative;
-    padding-top: 30px;
     .two-cols{
         margin-bottom: 0px;
         padding-bottom: 50px;;
     }
 }
+.partner-section.car-before{
+    padding-top: 30px;
 
+}
 
 .element-animation {
     opacity: 0;
@@ -518,6 +520,7 @@
         // background-image: url(../img/illustrations/main.png);
         padding-left: 85px;
         padding-top: 130px;
+        padding-right: 30px;
     }    
     .h1-mega{
         font-size: 40px;
@@ -561,7 +564,7 @@
         padding-top: 0px;
 
     }
-    .partner-section{
+    .partner-section.car-before{
         padding-top: 80px;
     }
     .sliders-wrap{
@@ -619,6 +622,7 @@
         padding-left: 127px;
         padding-top: 133px;
         padding-bottom: 111px;
+        padding-right: 50px;
     }
     .h1-mega{
         font-size: 70px;
@@ -897,8 +901,6 @@
         font-size: 1.6rem;
     }
     .partner-section{
-        padding-top: 117px;
-        padding-bottom: 40px;
         position: relative;
         .standart-list {
             color: #676573;
@@ -915,14 +917,19 @@
            line-height: 203.9%;
            max-width: 75%;;
         }
-        &:before{
-            content: "";
-            position: absolute;
-            top: -150px;
-            left: -250px;
-            width: 1238px;
-            height: 172px;
-            background-image: url('../img/illustrations/backcar.png');
+    &.car-before{
+        padding-top: 117px;
+        padding-bottom: 40px;
+        background-color: #EFEFEF;
+    }    
+    &.car-before:before{
+        content: "";
+        position: absolute;
+        top: -150px;
+        left: -250px;
+        width: 1238px;
+        height: 172px;
+        background-image: url('../img/illustrations/backcar.png');
         }
     }
     .margin-bottom{
@@ -947,10 +954,10 @@
             padding-bottom: 150px;
         }
 
-    }
-    
-
+    }  
 }
+
+
 
 @media screen and (min-width: 1750px){
     .main-content {

@@ -300,6 +300,26 @@
 
 }
 
+
+
+.map-container{
+    margin-bottom: 100px;;
+    .norm-gray-text{
+        margin-bottom: 30px;
+    }
+}
+
+.map-palce{
+    width: 295px;
+    height: 295px;
+    margin-bottom: 100px;
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
 @media screen and (min-width: 500px){
     .cards-box{
         justify-content: center;
@@ -320,6 +340,10 @@
     .slider-big-wrap{
         width: 300px;
         margin: 0 auto 100px;
+    }
+    .map-palce{
+        width: 100%;
+        min-height: 295px;
     }
 
 }
@@ -481,6 +505,20 @@
         width: 180px;
         height: 300px;
         margin: 0px 12px;
+    }
+    .map-palce{
+        width: 100%;
+        height: 575.556px;
+        margin-bottom: 150px;;
+    }
+    .map-container .norm-gray-text.bold{
+        max-width: 50%;
+        margin-bottom: 54px;
+    }
+    .map-container .norm-gray-text.oncenter{
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
     }
 
 }
