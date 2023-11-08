@@ -26,7 +26,7 @@ main
         .bottom-part 
             h2.h2.upper Співпраця
             p.bold-gray-text Автомобільні плівки бренду “Bright” об’єднують в собі лише добірні позиції кращих виробників Південної Кореї.
-            button.button.button-empty(title="Wyślij aplikację") Відправити заявку
+            a.button.button-empty.hook-scroll(title="Wyślij aplikację" href="#contacts") Відправити заявку
     section
         .container.information-block
             .two-cols 
@@ -240,7 +240,7 @@ main
                         .slider-texts
                             p.slider-header 
                             p.slider-bottom-text Mini Cooper S
-    section.partner-section.car-before
+    section.partner-section.car-before(data-scroll="contacts" id="contacts")
         .container
             .two-cols 
                 .col
