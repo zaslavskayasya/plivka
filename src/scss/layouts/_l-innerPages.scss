@@ -7,14 +7,14 @@
 }
 
 .card{
-    display: block;
-    width: 130px;
-    height: 190px;
     border-radius: 20px;
+    display: block;
+    height: 199px;
+    margin-bottom: 40px;
+    margin-right: 12px;
     position: relative;
+    width: 140px;
     overflow: hidden;
-    margin-right: 14px;
-    margin-bottom: 40px;;
     .image-wrap {
       overflow: hidden;
       img{
