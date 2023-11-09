@@ -31,6 +31,7 @@
     <script src="./js/jquery.min.js"> </script>
     <script src="./js/slick/slick.min.js"> </script>
     <script src="./js/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
     <script src="./js/main.js" defer> </script>
     <script src="./js/padding-left-script.js" defer></script>
     <script src="./js/header.js" defer></script>
@@ -364,7 +365,7 @@
                     <input type="email" id="mail" name="e-mail" autocomplete="on" placeholder="Електронна пошта" aria-label="E-mail" required><span class="error-message" id="mail-error"> </span>
                   </div>
                   <div class="form-group">
-                    <input type="tel" id="phone" name="phone" autocomplete="on" placeholder="Контактний телефон" aria-label="Telefoniczny numer kontaktowy" required><span class="error-message" id="phone-error">Невірний номер</span>
+                    <input type="tel" id="phone" name="phone" autocomplete="on" placeholder="Контактний телефон" aria-label="Telefoniczny numer kontaktowy" required pattern="^+48 d{3} d{3} d{3}$"><span class="error-message" id="phone-error">Невірний номер</span>
                   </div>
                   <div class="form-group">
                     <label class="check-container">

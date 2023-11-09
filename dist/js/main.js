@@ -86,4 +86,7 @@ $(document).ready(function(){
 
 });
 
+$(function(){
+  $("#phone").mask("+48(99) 999-9999");
+});
 //# sourceMappingURL=main.js.map
