@@ -13,7 +13,7 @@ let touchStartX = 0;
 let touchEndX = 0;
 let touchStartY = 0;
 let touchEndY = 0;
-const threshold = 50; 
+const threshold = 250; 
 
 
 const elementO = document.querySelector('body');
