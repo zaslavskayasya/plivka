@@ -130,6 +130,9 @@
 .phone-button {
   margin-right: 40px;
   margin-top: 1px;
+  // &:hover{
+
+  // }
 }
 
 .dropdown {
@@ -268,7 +271,17 @@
     padding: 9px 15px;
     text-decoration: none;
     margin-right: 0px;
+    transition: all ease 0.3s;
+    &:hover{
+      background-color: #111;
+      span{
+        color: #fff;
 
+      }
+      img{
+        filter: invert(1);
+      }
+    }
     span {
       display: block;
       color: #111;
