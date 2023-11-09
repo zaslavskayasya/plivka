@@ -1,6 +1,21 @@
 
-
 $(document).ready(function(){   
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
     // $('.slider-big ').slick({
     //     slidesToShow: 1,
     //     slidesToScroll: 1,
@@ -22,33 +37,37 @@ $(document).ready(function(){
     // });
 
 
-    $('.slider-big').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-prevs',
-      });
+    // $('.slider-big').slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     arrows: true,
+    //     fade: true,
+    //     asNavFor: '.slider-prevs',
+    //     infinite: false,
+    //   });
 
-      $('.slider-prevs').slick({      
-        slidesToShow: 3,
-        slidesToScroll: 2,
-        mobileFirst: true,
-        // rows: 2,
-        arrows :false,
-        asNavFor: '.slider-big',
-        focusOnSelect: true,
-        touchMove:true,
-        responsive: [{
-          breakpoint: 970,
-          settings: {           
-            slidesToScroll: 1,
-            slidesToShow: 5,
-            // rows:2,
-            // slidesPerRow: 3,
-          }
-        }]
-      });
+    //   $('.slider-prevs').slick({      
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     mobileFirst: true,
+    //     // rows: 2,
+    //     arrows :false,
+    //     asNavFor: '.slider-big',
+    //     focusOnSelect: true,
+    //     // centerMode: true,
+    //     // touchMove:true,
+    //     infinite: false,
+    //     // centerMode: true,
+    //     responsive: [{
+    //       breakpoint: 970,
+    //       settings: {           
+    //         slidesToScroll: 1,
+    //         slidesToShow:10,
+    //         // rows:2,
+    //         // slidesPerRow: 3,
+    //       }
+    //     }]
+    //   });
 
 
       $('.slider-w').slick({

@@ -65,38 +65,55 @@ section
 .section 
     .container 
         .slider-big-wrap 
-            .slider-big 
-                .item
-                    .wrap-item-image 
-                        img(src="img/illustrations/slider-image.webp", alt="slider-pic")
-                .item 
-                    .wrap-item-image
-                        img(src="img/illustrations/main.webp", alt="slider-pic")
-                .item
-                    .wrap-item-image 
-                        img(src="img/illustrations/many-cars-mob.webp", alt="slider-pic")
-                .item
-                    .wrap-item-image 
-                        img(src="img/illustrations/slider-image.webp", alt="slider-pic")
-                .item 
-                    .wrap-item-image
-                        img(src="img/illustrations/main.webp", alt="slider-pic")
-            .slider-prevs 
-                .item
-                    .wrap-prevs-item 
-                        img(src="img/illustrations/slider-image.webp", alt="slider-pic")
-                .item 
-                    .wrap-prevs-item
-                        img(src="img/illustrations/main.webp", alt="slider-pic")
-                .item
-                    .wrap-prevs-item 
-                        img(src="img/illustrations/slider-image.webp", alt="slider-pic")
-                .item 
-                    .wrap-prevs-item
-                        img(src="img/illustrations/main.webp", alt="slider-pic")
-                .item 
-                    .wrap-prevs-item
-                        img(src="img/illustrations/many-cars-mob.webp", alt="slider-pic")
+            .swiper.mySwiper2(style='--swiper-navigation-color: #fff; --swiper-pagination-color: #fff')
+                .swiper-wrapper
+                    .swiper-slide
+                        img(src='img/illustrations/slider-image.webp')
+                    .swiper-slide
+                        img(src='img/illustrations/main.webp')
+                    .swiper-slide
+                        img(src='img/illustrations/many-cars-mob.webp')
+            .swiper.mySwiper(thumbsslider='')
+                .swiper-wrapper
+                    .swiper-slide
+                        img(src='img/illustrations/slider-image.webp')
+                    .swiper-slide
+                        img(src='img/illustrations/main.webp')
+                    .swiper-slide
+                        img(src='img/illustrations/many-cars-mob.webp')
+
+            //- .slider-big 
+            //-     .item
+            //-         .wrap-item-image 
+            //-             img(src="img/illustrations/slider-image.webp", alt="slider-pic")
+            //-     .item 
+            //-         .wrap-item-image
+            //-             img(src="img/illustrations/main.webp", alt="slider-pic")
+            //-     .item
+            //-         .wrap-item-image 
+            //-             img(src="img/illustrations/many-cars-mob.webp", alt="slider-pic")
+            //-     .item
+            //-         .wrap-item-image 
+            //-             img(src="img/illustrations/slider-image.webp", alt="slider-pic")
+            //-     .item 
+            //-         .wrap-item-image
+            //-             img(src="img/illustrations/main.webp", alt="slider-pic")
+            //- .slider-prevs 
+            //-     .item
+            //-         .wrap-prevs-item 
+            //-             img(src="img/illustrations/slider-image.webp", alt="slider-pic")
+            //-     .item 
+            //-         .wrap-prevs-item
+            //-             img(src="img/illustrations/main.webp", alt="slider-pic")
+            //-     .item
+            //-         .wrap-prevs-item 
+            //-             img(src="img/illustrations/slider-image.webp", alt="slider-pic")
+            //-     .item 
+            //-         .wrap-prevs-item
+            //-             img(src="img/illustrations/main.webp", alt="slider-pic")
+            //-     .item 
+            //-         .wrap-prevs-item
+            //-             img(src="img/illustrations/many-cars-mob.webp", alt="slider-pic")
 
 .section.full-width.white
         .describe-block
