@@ -49,23 +49,23 @@ section.partner-section
                 .form-part.element-animation
                     form(id='contact-form' onsubmit='return validateForm(event)')
                         .form-group
-                            input(type='text', id='name', name='phone', placeholder='Назва компанії', aria-label="Nazwa firmy",  required)
+                            input(type='text', id='name', name='name', autocomplete="on" , placeholder='Назва компанії', aria-label="Nazwa firmy",  required)
                             span.error-message(id='name-error') 
                         .form-group
-                            input(type='email', id='mail', name='phone', placeholder='Електронна пошта', aria-label="E-mail",  required)
+                            input(type='email', id='mail', name='e-mail', autocomplete="on" , placeholder='Електронна пошта', aria-label="E-mail",  required)
                             span.error-message(id='mail-error') 
                         .form-group
-                            input(type='tel', id='phone', name='phone', placeholder='Контактний телефон', aria-label="Telefoniczny numer kontaktowy" , pattern='[0-9]{10}', required)
+                            input(type='tel', id='phone', name='phone', autocomplete="on" , placeholder='Контактний телефон', aria-label="Telefoniczny numer kontaktowy" , pattern='[0-9]{10}', required)
                             //- span.error-message(id='phone-error') Невірний номер
                         .form-group
                             label.check-container
-                                input(type="checkbox" aria-label="wyrażasz zgodę na naszą politykę prywatności.").checkbox
+                                input(type="checkbox" , name="agree" ,aria-label="wyrażasz zgodę na naszą politykę prywatności.").checkbox
                                 span.checkmark
                             p.text-agree  Відправляючи форму, ви погоджуєтесь з нашою 
                                 a(href="#") політикою конфіденційності.   
                         .form-group
                             label.check-container
-                                input(type="checkbox" aria-label="Podałem prawdziwy numer identyfikacyjny podatnika mojej firmy.").checkbox
+                                input(type="checkbox" , name="isReal", aria-label="Podałem prawdziwy numer identyfikacyjny podatnika mojej firmy.").checkbox
                                 span.checkmark
                             p.text-agree  Я приватний підприємець. Я ввів реальний ідентифікаційний номер платника податків моєї компанії.  
                         button.button.button-blue(type='submit' title="wyślij formularz") Надіслати
