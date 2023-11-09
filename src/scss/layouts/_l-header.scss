@@ -89,13 +89,14 @@
   &-ul {
     list-style: none;
     padding: 15px 15px;
+    text-align: center;
   }
   &-li {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
   &-link {
     font-family: inherit;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: b.$base-color;
     text-align: center;
     font-style: normal;
@@ -141,18 +142,19 @@
   width: 100%;
 
   .dropdown-link {
-    padding-right: 20px;
+    // padding-right: 20px;
   }
 
   .dropdown-link:after {
     content: "";
     display: block;
     width: 15px;
+    display: block;
     height: 7px;
     position: absolute;
-    right: auto;
-    left: 130px;
+    right: 22%;
     top: 7px;
+    width: 15px;
     background-image: url("../img/icons/arrdown.svg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -213,6 +215,7 @@
     flex-flow: wrap;
     align-items: center;
     padding: 14px 15px;
+
   }
 
   .dropdown {
