@@ -82,11 +82,12 @@ $(document).ready(function(){
             {
                 breakpoint: 970,
                 settings:{
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 2,
                     adaptiveWidth: true,
-                    centerMode: true,
-                }
+                    centerMode: false,
+
+                                    }
             },
         ]
       });

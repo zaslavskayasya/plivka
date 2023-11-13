@@ -13,6 +13,7 @@
     z-index: 5;
     padding-bottom: 141px;  
 }
+
 .main-content.main-page{
     padding-top: 92px;
     // padding-bottom: 162px;    
@@ -260,10 +261,11 @@
 
 .illustration-col{
     position: relative;
-    height: 273px;
+    height: 233px;
+    pointer-events: none;
     .wrap-illustration{
         position: absolute;
-        bottom: -7px;
+        bottom: -149px;
         left: -63%;
         img{
             max-width: 470px;;
@@ -288,7 +290,7 @@
         content: "";
         width: 55px;
         height: 55px;
-        background-color: #DBE3EF;
+        background-color: b.$background-color;
         background-image: url('../img/icons/search.svg');
         background-position: center;
         background-repeat: no-repeat;
@@ -621,6 +623,12 @@
     .dropdown .dropdown-link:after{
         right: 42%;
     }
+    .illustration-col {
+        height: 416px; 
+    }
+    .wrap-illustration img {
+        right: -10px;
+    }
 
 }
 
@@ -681,8 +689,8 @@
 @media screen and (min-width: 1460px){
     .main-content {
         padding-left: 127px;
-        padding-top: 133px;
-        padding-bottom: 111px;
+        padding-top: 113px;
+        padding-bottom: 110px;
         padding-right: 50px;
     }
     .main-content.main-page{
@@ -820,10 +828,12 @@
         }
     }
     .illustration-col .wrap-illustration img {
-        max-width: 700px;
+        max-width: 750px;
+        right: -0px;
+        width: 700px;
     }
     .illustration-col .wrap-illustration {
-        left: -21%;
+        left: -12%;
     }
     .information-part{
         .two-cols .col .pros-list, 
@@ -862,7 +872,7 @@
     .slider-main:after{
         width: 90px;
         height:90px;
-        background-size: 24px;
+        background-size: 20px;
     }
     .sliders-wrap{
         display: flex;
@@ -870,14 +880,14 @@
         .slider-nav{
             width: 100px;
             top: 15%;
-            right: 0px;
+            right: 10px;
             position: absolute;
             display: flex;
             flex-direction: column;
             .slick-slide{
                 position: relative;
                 width: 100px!important;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
                 img{
                     height: 100%;
                     width: 100%;

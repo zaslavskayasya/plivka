@@ -499,10 +499,10 @@ ul.breadcrumb a:hover {
     max-width: 1318px;
   } 
   h1, .h1{
-    font-size: 7.0rem;
-    font-weight: 800;
+    font-size: 6.0rem;
+    font-weight: 700;
     line-height: 116.5%; /* 81.55px */
-    text-transform: uppercase;
+    text-transform: none;
   }
   h2, .h2{
     font-size: 4rem;
@@ -575,16 +575,16 @@ ul.breadcrumb a:hover {
   .slick-wrap{
     position: relative;
   }
-  .slick-wrap:before{
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100px;
-    height: 100%;
-    z-index: 9;
-    background-color: $background-color;
-  }
+  // .slick-wrap:before{
+  //   content: "";
+  //   position: absolute;
+  //   top: 0px;
+  //   left: 0px;
+  //   width: 100px;
+  //   height: 100%;
+  //   z-index: 9;
+  //   background-color: $background-color;
+  // }
   .slider-btns{
     background-size: 11px
   }
