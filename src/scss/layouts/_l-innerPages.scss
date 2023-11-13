@@ -388,7 +388,12 @@
         height: 100%;
     }
 }
-
+.more-products {
+    padding-top: 50px;
+    .h2{
+        font-size: 2rem
+    }
+}
 
 @media screen and (min-width: 500px){
     .cards-box{
@@ -499,7 +504,12 @@
         width: 100%;
         height: 731px;
     }
-
+    .more-products {
+        padding-top: 5px;
+        .h2{
+            font-size: 4rem;
+        }
+    }
 
 }
 
@@ -572,7 +582,7 @@
         width: 1000px;
 
         .slider-w{
-            width: 800px;
+            width: 790px;
         }
     }
     .slick-wrap-w .slider-w .slider-item{
@@ -616,7 +626,7 @@
         width: 1390px;
         padding-top: 50px;;
         .slider-w{
-            width: 1220px;
+            width: 1200px;
         }
         .slick-list {
             margin: 0 0px;

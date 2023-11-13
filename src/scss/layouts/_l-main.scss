@@ -298,14 +298,11 @@
         position: absolute;
         right: 0px;
         bottom: 0px;
-        opacity: 0;
+        opacity: 1;
         transition: all 0.3s ease;
         pointer-events: none;
     }
-    &:hover:after  { 
-        opacity: 1;
 
-    }
 }
   .slider-nav{
     &.slick-dotted.slick-slider{
@@ -857,7 +854,7 @@
      padding-top: 20px;
      padding-right: 0px;;
      margin-bottom: 219px;
-     margin-right: 60px;
+     margin-right: 90px;
      max-width: 413px;
      .norm-gray-text {
         line-height: 223%;
