@@ -214,7 +214,7 @@
     justify-content: flex-start;
     flex-flow: wrap;
     align-items: center;
-    padding: 14px 15px;
+    padding: 14px 15px 14px 15px;
 
   }
 
@@ -320,7 +320,10 @@
   .nav-link {
     margin-right: 38px;
   }
+  .nav-ul {
+    padding: 14px 15px 14px 51px;
 
+  }
   .dropdown .dropdown-link {
     padding-right: 34px;
   }
