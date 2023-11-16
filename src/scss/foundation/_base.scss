@@ -270,7 +270,7 @@ ul.breadcrumb {
   margin-left: 0px;
   margin-bottom: 34px;
 }
-ul.breadcrumb a ,
+// ul.breadcrumb a ,
 ul.breadcrumb span{
   display: inline;
   margin-right: 10px;
@@ -282,9 +282,9 @@ ul.breadcrumb span{
   line-height: normal;
   margin-bottom: 10px;
 }
-  ul.breadcrumb a {
-    color: inherit
-  }
+ul.breadcrumb a {
+  color: inherit
+}
 ul.breadcrumb  a:after {
 content: '';
   display: inline-block;
@@ -294,7 +294,7 @@ content: '';
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-left: 11px;
+  margin-left: 10px;
 }
 ul.breadcrumb  a {
   text-decoration: none;
