@@ -282,6 +282,9 @@ ul.breadcrumb span{
   line-height: normal;
   margin-bottom: 10px;
 }
+  ul.breadcrumb a {
+    color: inherit
+  }
 ul.breadcrumb  a:after {
 content: '';
   display: inline-block;

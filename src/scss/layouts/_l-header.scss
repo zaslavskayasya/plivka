@@ -136,16 +136,16 @@
   // }
 }
 
-.dropdown {
+.menu-item-has-children {
   position: relative;
   display: inline-block;
   width: 100%;
 
-  .dropdown-link {
+  .nav-link:first-child  {
     // padding-right: 20px;
   }
 
-  .dropdown-link:after {
+  &:after {
     content: "";
     display: block;
     width: 15px;
@@ -165,7 +165,7 @@
   display: none;
 }
 
-.dropdown-content {
+.sub-menu {
   display: none;
   min-width: 160px;
   padding-left: 0px;
@@ -176,13 +176,13 @@
   }
 }
 
-.dropdown:hover .nav-link:first-child:after {
+.menu-item-has-children:hover .nav-link:first-child:after {
   svg {
     fill: b.$accent-color;
   }
 }
 
-.dropdown:hover .dropdown-content {
+.menu-item-has-children:hover .sub-menu {
   display: block;
   z-index: 9;
   padding-top: 20px;;
@@ -218,27 +218,29 @@
 
   }
 
-  .dropdown {
+  .menu-item-has-children {
     width: auto;
     background-color: b.$background-color;
   }
 
-  .dropdown .dropdown-link {
+  .menu-item-has-children .dropdown-link {
     padding-right: 14px;
   }
 
-  .dropdown-content {
+  .sub-menu {
     background-color: b.$background-color;
   }
 
-  .dropdown:hover .dropdown-content,
-  .dropdown.active .dropdown-content {
+  .menu-item-has-children:hover .sub-menu,
+  .menu-item-has-children.active .sub-menu {
     position: absolute;
     top: 1.8rem;
     z-index: 999;
     left: 0px;
+    min-width: 300px;
     .nav-li {
       padding: 16px 38px;
+      text-align: left;
 
       &:hover {
         background-color: #e7e7e7;
@@ -305,7 +307,7 @@
     }
   }
 
-  .dropdown .dropdown-link:after {
+  .menu-item-has-children .dropdown-link:after {
     right: 11px;
     top: 7px;
     left: auto;
@@ -324,11 +326,11 @@
     padding: 14px 15px 14px 51px;
 
   }
-  .dropdown .dropdown-link {
+  .menu-item-has-children .dropdown-link {
     padding-right: 34px;
   }
 
-  .dropdown .dropdown-link:after {
+  .menu-item-has-children .dropdown-link:after {
     left: auto;
     right: 39px;
     top: 7px;
@@ -361,7 +363,7 @@
 }
 
 @media screen and (min-width: 1750px) {
-  .dropdown .dropdown-link:after {
+  .menu-item-has-children .dropdown-link:after {
     right: 47px;
   
   }
