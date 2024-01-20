@@ -47,6 +47,7 @@ elementO.addEventListener('touchend', function (e) {
 const backElelementWithBackground = document.querySelector('[data-image]');
 
 let resizeWindowImage = function(){
+  console.log("resize");
   const imageResponsive = backElelementWithBackground.getAttribute('data-responsive');
   backElelementWithBackground.style.backgroundImage = `url(${imageResponsive})`;
 }
@@ -61,7 +62,7 @@ let pastImage = function(){
 }
 
 let chectSize = function(){
-  if(window.width < 760){
+  if(window.innerWidth < 760){
     pastImage()
   } else {
     resizeWindowImage()
