@@ -532,10 +532,12 @@
 
 .element-animation {
     opacity: 0;
+    transform: translateY(50px)
 }
 .element-animation.element-show {
     opacity: 1;
-    transition: opacity 2s;
+    transform: translateY(0);
+    transition: all ease 0.8s;
   }
 
 
