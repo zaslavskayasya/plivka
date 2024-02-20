@@ -22,7 +22,7 @@ $background-color: #F5F5F7;
 $lighten-color: #B6B6B6;
 $dark-lighten: #6A6A6A;
 $middle-color: #BDBDBD;
-$dark-gray: #676573;
+$dark-gray: #000000;
 
 
 //  ***********  MAIN ELEMENTS (HTML, BODY) *********** //
@@ -104,7 +104,7 @@ h3, .h3{
 
 h4, .h4{
   font-size: 2.0rem;
-  line-height: 195.9%;
+  line-height: 150%;
 }
 
 ul{
@@ -116,8 +116,29 @@ a{
   transition: all ease 0.3s;
 }
 
+.decor-line{
+  position: relative;
+  margin-bottom: 121px;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -53px;
+    left: 0px;
+    height: 3px;
+    background-color: #216BDC;
+    width: 168px;
+  }
+  &-centered{
+    &:before{
+      left: 50%;
+      transform: translateX(-50%)
+    }
+  }
+}
+
 .header-up{
-  color: $middle-color;
+  color: #216BDC;
   font-family: inherit;
   font-size: 1.4rem;
   font-style: normal;
@@ -155,17 +176,17 @@ a{
 }
 
 .norm-gray-text{
-  color: $dark-gray;
+  color: #000000;
   font-family: inherit;
   font-size: 1.4rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 195.9%; /* 27.426px */  
  
 }
 
 .big-gray-text{
-  color: $dark-gray;
+  color: #000;
   font-family: inherit;
   font-size: 1.4rem;
   font-style: normal;
@@ -199,9 +220,9 @@ a{
 .standart-list{
   padding-left: 30px;
   margin-bottom: 30px;
-  color: #676573;
+  color: #000000;
   li{
-    color: #676573;
+    color: #000000;
     margin-bottom: 20px;
     position: relative;
     &:before{
@@ -218,7 +239,90 @@ a{
 }
 
 
+.centred-header, h4.h4.centered-header{
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto 80px;
+}
 
+
+.medium-text{
+  font-weight: 500;
+  line-height: 202%;;
+  color: #000;
+  font-size: 18px;
+}
+.medium-text.norm-gray-text{
+  font-size: 18px;
+}
+
+.margin-top-40{
+  margin-top: 100px;
+}
+.padding-l{
+  padding-left: 120px;
+}
+.round-sahadow{
+  box-shadow: -2px 1px 26px #d2d2d2c4;
+  border-radius: 25px;
+}
+.pros-list{
+   display: flex;
+   flex-flow: wrap;
+   justify-content: space-around;
+  //  justify-content: space-between;
+   margin-bottom: 80px;
+   .pros-item{
+    width: 219px;
+    height: 193px;
+    display: flex;
+    flex-direction: column;
+    padding: 85px 30px 80px 30px;
+    background-color: 0px;
+    box-shadow: 10px 10px #c4c4c4c4;
+    box-shadow: -2px 1px 26px #d2d2d2c4;
+    border-radius: 25px;
+    position: relative;
+    &:before{
+      content: "";
+      background-color: #216BDC;
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      width: 168px;
+    }
+   }
+   .pros-image-wrap{
+      height: 92px;
+      min-width: 90px;
+      // margin-bottom: 50px;
+      margin: 0 auto 50px;
+      img{
+        width: 100%
+      }
+   }
+   .pros-text{
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 160%;
+      text-align: center;
+      max-width: 205px;
+   }
+}
+
+.illustration-box{
+  position: relative;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  img{
+    width: 100%;
+  }
+}
 
 //  ***********  bUTTONS *********** //
 
@@ -490,6 +594,11 @@ ul.breadcrumb a:hover {
     font-size: 2.4rem;
     margin-bottom: 24px;;
   }
+  .illustration-box{
+
+    width: 599px;
+    height: 588px;
+  }
 
 }
 
@@ -542,8 +651,9 @@ ul.breadcrumb a:hover {
     line-height: 145%;
   }
   .no-end-wrap {
-    padding-left: 86px;
+    padding-left: 81px;
     padding-top: 11px;
+    // padding-top: 44px;
     .h4{
       margin-bottom: 25px;
     }
@@ -578,6 +688,10 @@ ul.breadcrumb a:hover {
     &-bottom-text{
       max-width: 200px;
     }
+    .pros-list{
+      justify-content: space-between;
+      margin-bottom: 150px;
+    }
   }
   .slick-wrap{
     position: relative;
@@ -594,6 +708,23 @@ ul.breadcrumb a:hover {
   // }
   .slider-btns{
     background-size: 11px
+  }
+  .centred-header, h4.h4.centered-header{
+    max-width: 90%;
+    margin: 0 auto 80px;
+  }
+  
+  
+  .medium-text{
+
+    font-size: 24px;
+  }
+  .medium-text.norm-gray-text{
+    font-size: 24px;
+  }
+  
+  .margin-top-40{
+    margin-top: 100px;
   }
 }
 

@@ -185,7 +185,7 @@
 
 .pros{
     &-list{
-        margin: 0px;
+        // margin: 0px;
     }
     &-item{
         display: flex;
@@ -265,8 +265,8 @@
     pointer-events: none;
     .wrap-illustration{
         position: absolute;
-        bottom: -149px;
-        left: -63%;
+        bottom: -13px;
+        left: -43%;
         img{
             max-width: 470px;;
         }
@@ -369,11 +369,36 @@
 /// *******  FORM   ******* ///
 
 .form-part{
-    padding-top: 30px;
+    // padding-top: 30px;
+    background-color: #fff;
+    padding: 64px 69px;
+    margin-bottom: 70px;
     button{
-        width: 90%;
+        width: 300px;
+        display: block;
         margin: 0 auto;    
     }
+    
+    // flex-direction: column;
+}
+.form-2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 50px;
+    .form-row{
+        width: 100%;
+    }
+}
+.form-btn{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    margin-top: 20px;
+
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .form-group {
@@ -460,7 +485,7 @@
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: #eee;
+    // background-color: #eee;
     border: 2px solid #095CD9 ;
   }
   
@@ -524,6 +549,10 @@
         margin-bottom: 0px;
         padding-bottom: 50px;;
     }
+    .norm-gray-text.medium-text{
+        margin-bottom: 50px;
+
+    }
 }
 .partner-section.car-before{
     padding-top: 30px;
@@ -539,7 +568,9 @@
     transform: translateY(0);
     transition: all ease 0.8s;
   }
-
+  .partner-section{
+    margin-bottom: 100px;
+}
 
 @media screen and (min-width: 500px){
     .illustration-col .wrap-illustration{
@@ -584,7 +615,7 @@
 @media screen and (min-width: 950px){
     .pros{
         &-list{
-            margin: 0px;
+            // margin: 0px;
         }
         &-item{
             margin-bottom: 60px;;
@@ -628,7 +659,9 @@
     .wrap-illustration img {
         right: -10px;
     }
-
+    .partner-section{
+        margin-bottom: 200px;
+    }
 }
 
 
@@ -661,6 +694,24 @@
         text-align: left;
 
     }
+    .form-2{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .form-2 .form-row {
+        width: 48%;
+    }
+    .form-btn{
+        position: relative;
+        bottom: 30px;
+        left: 30px;
+    }
+    .form-part button{
+        max-width: 260px;
+        margin-left: 0px;;
+        transform: translateX(0%);
+        left: 0;
+    }
 
 }
 
@@ -685,15 +736,13 @@
         top: 19%;
         
     }
+
 }
 
 
 @media screen and (min-width: 1460px){
     .main-content {
-        padding-left: 127px;
-        padding-top: 113px;
-        padding-bottom: 110px;
-        padding-right: 50px;
+        padding: 92px 50px 183px 127px;
     }
     .main-content.main-page{
         padding-top: 133px;
@@ -857,6 +906,7 @@
     }
     .no-end-wrap{
      padding-top: 20px;
+     padding-top: 44px;
      padding-right: 0px;;
      margin-bottom: 219px;
      margin-right: 90px;
@@ -969,17 +1019,14 @@
     .form-group{
         margin-bottom: 40px;;
     }
-    .form-part button{
-        max-width: 260px;
-        margin-left: 0px;;
-    }
+
     .adress-link{
         font-size: 1.6rem;
     }
     .partner-section{
         position: relative;
         .standart-list {
-            color: #676573;
+            color: #000000;
             margin-bottom: 97px;
             padding-left: 30px;
             max-width: 68%;
@@ -988,7 +1035,7 @@
             margin-bottom: 35px;
         }
         .norm-gray-text.thin{
-           color: #676573;
+           color: #000000;
            font-weight: 500;
            line-height: 203.9%;
            max-width: 75%;;
@@ -1016,10 +1063,11 @@
         height: 24px;
     }
     .form-part{
-        max-width: 500px ;
-        align-self: right;
-        float: right;
-        padding-top: 32px;
+        // max-width: 500px ;
+        // align-self: right;
+        // float: right;
+        // padding-top: 32px;
+        margin-bottom: 200px;
     }
     .form-group input, .form-group textarea{
         padding: 24px 16px 24px;
