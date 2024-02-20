@@ -237,9 +237,13 @@ a{
   }
   }
 }
+.subheader-normal.centered-header,
+.element-animation.element-show.centered-header{
+  text-align: center;
+}
 
-
-.centred-header, h4.h4.centered-header{
+.centred-header, h4.h4.centered-header, 
+h4.h4.centered-header{
   font-weight: 700;
   line-height: 150%;
   text-align: center;
@@ -285,6 +289,7 @@ a{
     box-shadow: -2px 1px 26px #d2d2d2c4;
     border-radius: 25px;
     position: relative;
+    transition: all ease 0.3s;
     &:before{
       content: "";
       background-color: #216BDC;
@@ -295,7 +300,12 @@ a{
       height: 3px;
       width: 168px;
     }
-   }
+    &:hover{
+
+        transform: translateY(-20px);
+
+    }
+  }
    .pros-image-wrap{
       height: 92px;
       min-width: 90px;
@@ -312,6 +322,22 @@ a{
       text-align: center;
       max-width: 205px;
    }
+}
+
+
+.pros-list.pros-type-2{
+  .pros-item{
+
+    height: 287px;
+  }
+}
+
+
+.pros-percent{
+  color: #216BDC;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 50px;
 }
 
 .illustration-box{
@@ -602,6 +628,40 @@ ul.breadcrumb a:hover {
 
 }
 
+.centred{
+  text-align: center;
+
+}
+.m-bottom{
+  margin-bottom: 116px;;
+}
+
+.horizontal-item{
+  padding: 40px 30px 40px 30px;
+  background-color: #fff;
+  margin-bottom: 37px;
+  display: flex;
+  flex-direction: column;;
+  transition: all ease 0.3s;
+  &:hover{
+    transform: translateY(-10px)
+  }
+  .image-place {
+    margin: 0px auto 15px;
+
+  }
+  .card-heading{
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .text-in-card{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 200%;
+  }
+}
+
 
 @media screen and (min-width: 1120px){
   .container{  
@@ -611,6 +671,28 @@ ul.breadcrumb a:hover {
 
 
 @media screen and (min-width: 1200px) {
+
+  .horizontal-item{
+    padding: 67px 87px 58px 87px;
+    background-color: #fff;
+    flex-direction: row;
+    .image-place {
+      margin: auto;
+      margin-right: 105px;
+      width: 95px;
+    }
+    .card-heading{
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 20px;;
+    }
+    .text-in-card{
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 200%;
+    }
+  }
+
   .big-container {
     max-width: 1318px;
   } 
@@ -689,8 +771,23 @@ ul.breadcrumb a:hover {
       max-width: 200px;
     }
     .pros-list{
-      justify-content: space-between;
+      justify-content: center;
+      // justify-content: space-around;
+      
       margin-bottom: 150px;
+      .pros-item{
+        margin: 0px 10px;
+      }
+    }
+  }
+  // .pros-list.pros-type-2{
+  //   justify-content: center;
+
+  // }
+  .pros-list{
+    justify-content: center;
+    .pros-item{
+      margin: 15px 10px;
     }
   }
   .slick-wrap{
@@ -713,8 +810,7 @@ ul.breadcrumb a:hover {
     max-width: 90%;
     margin: 0 auto 80px;
   }
-  
-  
+ 
   .medium-text{
 
     font-size: 24px;
