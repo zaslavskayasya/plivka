@@ -358,7 +358,7 @@ h4.h4.centered-header{
     flex-direction: column;
     // padding: 85px 30px 80px 30px;
     padding: 36px 9px 34px;
-    background-color: 0px;
+    background-color: #fff;
     box-shadow: 10px 10px #c4c4c4c4;
     box-shadow: -2px 1px 26px #d2d2d2c4;
     border-radius: 25px;
@@ -422,7 +422,9 @@ h4.h4.centered-header{
     height: 287px;
   }
 }
-
+.pros-list.simple{
+  // padding: 81px 30px;
+}
 
 .pros-percent{
   color: #216BDC;
@@ -795,8 +797,6 @@ ul.breadcrumb a:hover {
   .decor-line:before{
   top: -50px
   }
-
-
   .pros-list .pros-image-wrap {
 
     height: 92px;
@@ -804,8 +804,17 @@ ul.breadcrumb a:hover {
     // margin-bottom: 50px;
     margin: 0 auto 50px;
   }
+  .pros-list.simple {
 
-  
+    .pros-item{
+      padding: 71px 30px 97px;
+    }
+    .pros-text{
+      font-weight: 800;
+      font-size: 18px;
+      max-width: 99%;
+    }
+  }
   .pros-list{
     justify-content: center;
     .pros-text{
@@ -814,18 +823,20 @@ ul.breadcrumb a:hover {
     .pros-item{
       width: 219px;
       height: 193px;
-      padding: 85px 30px 80px 30px;
+      padding: 55px 30px 55px 30px;
       &:before{
         width: 168px;
       }
     }
+
+
   }
   .pros-list .pros-image-wrap {
 
     height: 92px;
     min-width: 90px;
     // margin-bottom: 50px;
-    margin: 0 auto 50px;
+    margin: 0 auto 35px;
   }
 
 
@@ -849,9 +860,8 @@ ul.breadcrumb a:hover {
     background-color: #fff;
     flex-direction: row;
     .image-place {
-      margin: auto;
-      margin-right: 105px;
-      width: 95px;
+      margin: auto 49px auto auto;
+      width: 173px;
     }
     .card-heading{
       margin-bottom: 15px;
@@ -862,6 +872,10 @@ ul.breadcrumb a:hover {
       font-size: 16px;
       font-weight: 500;
       line-height: 200%;
+    }
+    .text-place{
+      padding-left: 30px;
+
     }
   }
 
@@ -947,17 +961,15 @@ ul.breadcrumb a:hover {
       // justify-content: space-around;
       
       margin-bottom: 150px;
-      .pros-item{
-        margin: 0px 10px;
-      }
+
     }
   }
 
   .margin-bottom-big{
-    margin-bottom: 200px!Important;
+    margin-bottom: 190px!Important;
   }
   .margin-bottom-norm{
-    margin-bottom: 120px;
+    margin-bottom: 120px!Important;
   }
   // .pros-list.pros-type-2{
   //   justify-content: center;
@@ -966,7 +978,7 @@ ul.breadcrumb a:hover {
   .pros-list{
     justify-content: center;
     .pros-item{
-      margin: 15px 10px;
+      margin: 15px 19px 20px;
     }
   }
   .slick-wrap{
@@ -1016,6 +1028,7 @@ ul.breadcrumb a:hover {
     padding: 64px 69px;
 }
 }
+
 
 @media screen and (min-width: 1300px) {
   .container {
