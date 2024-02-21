@@ -24,35 +24,80 @@ section
             a(href="mailto:info@brightfilms.pl").mail-link  info@brightfilms.pl      
 section.partner-section
     .container
-        .two-cols 
+        .two-cols
             .col
-                h2.h2.element-animation Стати партнером
-                p.norm-gray-text.thin Дякуємо за виявлену вами зацікавленість у співпраці з нашою компанією. Ми завжди відкриті до нових партнерських можливостей та співпраці з інноваційними та амбіційними організаціями.
-                ul.standart-list 
-                    li.norm-gray-text.element-animation Ми зателефонуємо вам, щоб обговорити те, що вам потрібно
-                    li.norm-gray-text.element-animation Ми надішлемо вам індивідуальну пропозицію
-                    li.norm-gray-text.element-animation Ми звяжемося з вами знову, щоб відповісти на будь-які ваші запитання та визначити, чи має сенс співпраця
-                ul.adress-list.element-animation
-                    li.adress-li
-                        .adress-img-wrap
-                            img(src="img/icons/location-fill.svg", alt="location").adress-img 
-                        a(href="https://www.google.com/maps/search/%D0%92%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9E%D1%80%D0%BA%D1%96%D1%88%D0%BE%D0%B2%D0%B0,+10,+02-886+%D0%92%D0%B0%D1%80%D1%88%D0%B0%D0%B2%D0%B0/@51.4638918,20.1691892,7.63z?hl=uk-UK&entry=ttu").adress-link.adress Вулиця Оркішова, 10, 02-886 Варшава
-                    li.adress-li
-                        .adress-img-wrap
-                            img(src="img/icons/phone-fill.svg", alt="location").adress-img 
-                        a(href="tel:+48881928014").adress-link +48 881 928014
-                    li.adress-li
-                        .adress-img-wrap
-                            img(src="img/icons/mail-fill.svg", alt="location").adress-img 
-                        a(href="mailto:info@brightfilms.pl").adress-link info@brightfilms.pl
+                h4.h4.element-animation.decor-line.part-header Стати партнером
+                p.norm-gray-text.element-animation Дякуємо за виявлену вами зацікавленість у співпраці з нашою компанією. Ми завжди відкриті до нових партнерських можливостей та співпраці з інноваційними та амбіційними організаціями.
+               
+                //- ul.adress-list.element-animation
+                //-     li.adress-li
+                //-         .adress-img-wrap
+                //-             img(src="img/icons/location-fill.svg", alt="location").adress-img 
+                //-         a(href="https://www.google.com/maps/search/%D0%92%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9E%D1%80%D0%BA%D1%96%D1%88%D0%BE%D0%B2%D0%B0,+10,+02-886+%D0%92%D0%B0%D1%80%D1%88%D0%B0%D0%B2%D0%B0/@51.4638918,20.1691892,7.63z?hl=uk-UK&entry=ttu").adress-link.adress Вулиця Оркішова, 10, 02-886 Варшава
+                //-     li.adress-li
+                //-         .adress-img-wrap
+                //-             img(src="img/icons/phone-fill.svg", alt="location").adress-img 
+                //-         a(href="tel:+48881928014").adress-link +48 881 928014
+                //-     li.adress-li
+                //-         .adress-img-wrap
+                //-             img(src="img/icons/mail-fill.svg", alt="location").adress-img 
+                //-         a(href="mailto:info@brightfilms.pl").adress-link info@brightfilms.pl
             .col 
-                .illustration-box
+                .illustration-box.margin-bottom-norm
                     .img-w 
                         img(src="img/illustrations/group1.png", alt="") 
+        ul.number-list 
+            li.norm-gray-text.element-animation 
+                span 1
+                p Ми зателефонуємо вам, щоб обговорити те, що вам потрібно
+            li.norm-gray-text.element-animation
+                span 2
+                p Ми надішлемо вам індивідуальну пропозицію
+            li.norm-gray-text.element-animation
+                span 3 
+                p Ми звяжемося з вами знову, щоб відповісти на будь-які ваші запитання та визначити, чи має сенс співпраця
+.section
+    .container.margin-bottom-big
+        h4.h4.thin.element-animation.centred.padding-30.centered-header.decor-line.decor-line-centered Залишились питання?
+            br 
+            | Напишіть нам
+        .form-part.element-animation.round-sahadow
+            form(id='contact-form' onsubmit='return validateForm(event)').form-2
+                .form-row
+                    .form-group
+                        input(type='text', id='name', name='name', autocomplete="on" , placeholder='Назва компанії', aria-label="Nazwa firmy",  required)
+                        span.error-message(id='name-error') 
+                    .form-group
+                        input(type='email', id='mail', name='e-mail', autocomplete="on" , placeholder='Електронна пошта', aria-label="E-mail",  required)
+                        span.error-message(id='mail-error') 
+                    .form-group
+                        input(type='tel', id='phone', name='phone', autocomplete="on" , placeholder='Контактний телефон', aria-label="Telefoniczny numer kontaktowy",  required)
+                        span.error-message(id='phone-error') Невірний номер
+                    button.button.button-blue(type='submit' title="wyślij formularz").form-btn Надіслати
+                .form-row
+                    .form-group
+                        input(type='text', id='name', name='name', autocomplete="on" , placeholder='Назва компанії', aria-label="Nazwa firmy",  required)
+                        span.error-message(id='name-error') 
+                    .form-group
+                        input(type='email', id='mail', name='e-mail', autocomplete="on" , placeholder='Електронна пошта', aria-label="E-mail",  required)
+                        span.error-message(id='mail-error') 
+                    .form-group
+                        label.check-container
+                            input(type="checkbox" , name="agree" ,aria-label="wyrażasz zgodę na naszą politykę prywatności.").checkbox
+                            span.checkmark
+                        p.text-agree  Відправляючи форму, ви погоджуєтесь з нашою 
+                            a(href="#") політикою конфіденційності.   
+                    .form-group
+                        label.check-container
+                            input(type="checkbox" , name="isReal", aria-label="Podałem prawdziwy numer identyfikacyjny podatnika mojej firmy.").checkbox
+                            span.checkmark
+                        p.text-agree  Я приватний підприємець. Я ввів реальний ідентифікаційний номер платника податків моєї компанії.  
+
+
 section 
     .container.map-container 
-        h2.h2  Наші аплікатори на карті
-        p.norm-gray-text.bold Щоб забезпечити безпеку вашого автомобіля, знайдіть на карті нижче нашого авторизованого аплікатора та зв'яжіться з ним для консультації.
-        .map-palce
+        h4.h4.element-animation.centered-header.decor-line.decor-line-centered.no-margin  Наші аплікатори на карті
+        p.norm-gray-text.element-animation.centered-header.margin-bottom-norm Щоб забезпечити безпеку вашого автомобіля, знайдіть на карті нижче нашого авторизованого аплікатора та зв'яжіться з ним для консультації.
+        .map-palce.margin-bottom-big
             iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63842.163046993206!2d20.748721234127547!3d52.26028220044693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecb19645b3059%3A0x9e06df40b484a3d!2zR09MRFNFUldJUyBBdXRvU2Vyd2lzINCh0KLQniDQkNCy0YLQvtGB0LXRgNCy0LjRgQ!5e0!3m2!1suk!2sua!4v1699455811507!5m2!1suk!2sua'   style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
-        p.norm-gray-text.oncenter Дякуємо за виявлену вами зацікавленість у співпраці з нашою компанією. Ми завжди відкриті до нових партнерських можливостей та співпраці з інноваційними та амбіційними організаціями.
+        p.margin-bottom-big.norm-gray-text.oncenterh4.h4.element-animation.centered-header.decor-line.decor-line-centered.no-margin Дякуємо за виявлену вами зацікавленість у співпраці з нашою компанією. Ми завжди відкриті до нових партнерських можливостей та співпраці з інноваційними та амбіційними організаціями.

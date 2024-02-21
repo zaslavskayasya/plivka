@@ -242,6 +242,13 @@
 
 }
 
+.partner-section{
+    .part-header{
+        margin-top: 50px;;
+    }
+}
+
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -565,6 +572,11 @@
     }
     .ordered-block .wrap-illustration img {
         right: -92px;
+    }
+    .partner-section{
+        .part-header{
+            margin-top: 150px;;
+        }
     }
 }
 
