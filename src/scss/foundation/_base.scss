@@ -123,7 +123,7 @@ a{
     content: "";
     display: block;
     position: absolute;
-    top: -53px;
+    top: -20px;
     left: 0px;
     height: 3px;
     background-color: #216BDC;
@@ -313,7 +313,7 @@ h4.h4.centered-header{
   font-weight: 700;
   line-height: 150%;
   text-align: center;
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto 20px;
 }
 
@@ -747,6 +747,9 @@ ul.breadcrumb a:hover {
 @media screen and (min-width: 1120px){
   .container{  
     max-width: 1000px;
+  }
+  .decor-line:before{
+  top: -50px
   }
 }
 .margin-bottom-big{
