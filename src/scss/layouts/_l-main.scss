@@ -370,7 +370,7 @@
 
 .form-part{
     // padding-top: 30px;
-    background-color: #fff;
+    // background-color: #fff;
     padding: 42px 26px;
     margin-bottom: 70px;
     button{
@@ -556,7 +556,10 @@
 }
 .partner-section.car-before{
     padding-top: 30px;
-
+    margin-bottom: 0px!Important;
+    .form-part{
+        margin-bottom: 0px!Important;
+    }
 }
 
 .element-animation {
