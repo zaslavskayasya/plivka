@@ -338,7 +338,7 @@ h4.h4.centered-header{
   margin-top: 100px;
 }
 .padding-l{
-  padding-left: 120px;
+  padding-left: 20px;
 }
 .round-sahadow{
   box-shadow: -2px 1px 26px #d2d2d2c4;
@@ -420,11 +420,14 @@ h4.h4.centered-header{
 }
 .pros-list.pros-type-2{
   .pros-item{
-    height: 335px;
+    // height: 335px;
+    height: auto;
+    width: 222px;
   }
 }
 .pros-list.simple{
   // padding: 81px 30px;
+  // margin-bottom: 200px;
 }
 
 .pros-percent{
@@ -696,6 +699,9 @@ ul.breadcrumb a:hover {
       width: 230px;
     }
   }
+  .padding-l{
+    padding-left: 120px;
+  }
 }
 
 @media screen and (min-width: 960px){
@@ -719,6 +725,9 @@ ul.breadcrumb a:hover {
         padding-left: 28px; 
       }
     }  
+  }
+  .pros-list.simple{
+    margin-bottom: 200px;
   }
   .container-no-end{
     display: flex;
