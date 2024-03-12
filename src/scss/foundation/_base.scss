@@ -668,7 +668,9 @@ ul.breadcrumb a:hover {
 }
 
 //  ***********  MEDIA  *********** //
-
+.pros-list.margin-top-40{
+  margin-top: 20px;
+}
 
 @media screen and (min-width: 360px) {
   .pros-list{
@@ -678,6 +680,7 @@ ul.breadcrumb a:hover {
       width: 200px;
     }
   }
+
   
 }
 
@@ -692,6 +695,9 @@ ul.breadcrumb a:hover {
     .pros-item{
       width: 200px;
     }
+  }
+  .pros-list.margin-top-40{
+    margin-top: 80px;
   }
 }
 
