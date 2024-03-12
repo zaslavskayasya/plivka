@@ -43,9 +43,15 @@ elementO.addEventListener('touchend', function (e) {
 });
 
 
-/// header images 
+/// header images
+
 const backElelementWithBackground = document.querySelector('[data-image]');
 
+console.log(backElelementWithBackground)
+
+if(backElelementWithBackground!=null){
+
+}
 let resizeWindowImage = function(){
   console.log("resize");
   const imageResponsive = backElelementWithBackground.getAttribute('data-responsive');
@@ -61,6 +67,7 @@ let pastImage = function(){
   }
 }
 
+
 let chectSize = function(){
   if(window.innerWidth < 760){
     pastImage()
@@ -69,13 +76,16 @@ let chectSize = function(){
   }
 }
 
-chectSize();
+if(backElelementWithBackground!=null){
 
-window.addEventListener('resize', ()=> {
   chectSize();
 
-});
-
+  window.addEventListener('resize', ()=> {
+    chectSize();
+  
+  });
+  document.getElementById('vid').play();
+}
 
 
 // hide/show header

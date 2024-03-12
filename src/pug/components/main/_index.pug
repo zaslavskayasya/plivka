@@ -1,6 +1,8 @@
 main
     .l-main.big-container.element-animation
-        .main-content.main-page(data-image="img/illustrations/main-min.webp" data-responsive="img/illustrations/main.webp")
+        .main-content.main-page
+            video.header-video(autoplay="true" loop id="vid") 
+                source(src="video/bright.webm" type="video/webm")
             ul.social-media-block.element-animation
                 li.social-media-li
                     a(href="#").social-media-link
