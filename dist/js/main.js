@@ -5,7 +5,8 @@
 $(document).ready(function(){
   $('.slider').slick({
     slidesToShow: 2,
-    variableWidth: true
+    variableWidth: true,
+    slidesToScroll: 2,
   });
   $(".prev-btn").click(function () {
 		$(".slider").slick("slickPrev");
@@ -32,7 +33,8 @@ $(document).ready(function(){
 
   $('.slider2').slick({
     slidesToShow: 2,
-    variableWidth: true
+    variableWidth: true,
+    slidesToScroll: 2,
   });
   $(".prev-btn").click(function () {
 		$(".slider2").slick("slickPrev");

@@ -231,7 +231,7 @@
 
 
 .container-no-end{
-    padding-left: 15px;
+    padding-left: 105px;
 
     .slick-wrap{
         // padding-left: 200px;
@@ -631,6 +631,7 @@
         padding-top: 50px;;
 
     }
+
 }
 
 
@@ -688,10 +689,12 @@
     .partner-section{
         margin-bottom: 200px;
     }
+
 }
 
 
 @media screen  and (min-width: 1120px) {
+
     .bottom-part{
         display: flex;
         justify-content: space-between;
@@ -759,8 +762,11 @@
     .illustration-col .wrap-illustration {
         left: -51%;
         bottom: auto;
-        top: 19%;
-        
+        top: 19%;   
+
+    }
+    .container-no-end{
+        padding-left: 15px;;
     }
 
 }

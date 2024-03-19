@@ -1,4 +1,5 @@
 
+
 let menuButton = document.querySelector('.menu-lines');
 let navigation = document.querySelector('.nav');
 
@@ -84,7 +85,13 @@ if(backElelementWithBackground!=null){
     chectSize();
   
   });
-  document.getElementById('vid').play();
+
+  var player = new Vimeo.Player('vimeo-player', {
+    id: '922928601',
+    autoplay: true,
+    loop: true,
+  controls: false
+});
 }
 
 
