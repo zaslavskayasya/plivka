@@ -77,22 +77,6 @@ let chectSize = function(){
   }
 }
 
-if(backElelementWithBackground!=null){
-
-  chectSize();
-
-  window.addEventListener('resize', ()=> {
-    chectSize();
-  
-  });
-
-  var player = new Vimeo.Player('vimeo-player', {
-    id: '922928601',
-    autoplay: true,
-    loop: true,
-  controls: false
-});
-}
 
 
 // hide/show header
