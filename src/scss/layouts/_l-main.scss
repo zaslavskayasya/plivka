@@ -594,10 +594,19 @@
     margin-bottom: 100px;
 }
 
+#player{
+    transform: scale(6);
+}
+
+
+
 @media screen and (min-width: 500px){
     .illustration-col .wrap-illustration{
         bottom: -7px;
         left: -15%;
+    }
+    #player{
+        transform: scale(4);
     }
 }
 
@@ -607,6 +616,9 @@
     }
     .dropdown .dropdown-link:after{
         right: 35%;
+    }
+    #player{
+        transform: scale(2);
     }
 
 }
@@ -740,6 +752,9 @@
         margin-left: 0px;;
         transform: translateX(0%);
         left: 0;
+    }
+    #player{
+        transform: scale(1.6);
     }
 
 }
