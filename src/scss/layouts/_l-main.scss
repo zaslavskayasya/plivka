@@ -594,7 +594,7 @@
     margin-bottom: 100px;
 }
 
-#player{
+#vimeo-player iframe{
     transform: scale(6);
 }
 
@@ -605,7 +605,7 @@
         bottom: -7px;
         left: -15%;
     }
-    #player{
+    #vimeo-player iframe{
         transform: scale(4);
     }
 }
@@ -617,7 +617,7 @@
     .dropdown .dropdown-link:after{
         right: 35%;
     }
-    #player{
+    #vimeo-player iframe{
         transform: scale(2);
     }
 
@@ -716,6 +716,13 @@
       .bottom-part .h2, .bottom-part .bold-gray-text{
         margin-bottom: 0px;;
       }
+      .cont-form{
+        .form-part button{
+            margin: 0 auto;
+            left: auto;
+            position: relative;
+        }
+    }
       .bottom-part .bold-gray-text{
         max-width: 40%;
         text-align: left;
@@ -753,8 +760,15 @@
         transform: translateX(0%);
         left: 0;
     }
-    #player{
+    #vimeo-player iframe{
         transform: scale(1.6);
+    }
+    .cont-form{
+        button.centered{
+            margin: 0 auto;
+            left: auto;
+            position: relative;
+        }
     }
 
 }
@@ -1126,6 +1140,11 @@
         }
 
     }  
+    section.partner-section.education{
+        margin-bottom: 0px;;
+
+
+    }
 }
 
 

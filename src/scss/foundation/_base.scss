@@ -157,6 +157,7 @@ a{
   height: 100px;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
   p{
     position: relative;
     z-index: 9;
@@ -516,6 +517,7 @@ ul.breadcrumb span{
   font-weight: 700;
   line-height: normal;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 ul.breadcrumb a {
   color: inherit

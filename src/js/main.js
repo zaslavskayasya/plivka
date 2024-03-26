@@ -8,6 +8,7 @@ $(document).ready(function(){
     variableWidth: true,
     slidesToScroll: 2,
   });
+  
   $(".prev-btn").click(function () {
 		$(".slider").slick("slickPrev");
 	});

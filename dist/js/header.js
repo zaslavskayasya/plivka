@@ -47,12 +47,12 @@ elementO.addEventListener('touchend', function (e) {
 /// header images
 
 const backElelementWithBackground = document.querySelector('[data-image]');
+console.log(backElelementWithBackground);
 
-console.log(backElelementWithBackground)
+// if(backElelementWithBackground!=null){
 
-if(backElelementWithBackground!=null){
+// }
 
-}
 let resizeWindowImage = function(){
   console.log("resize");
   const imageResponsive = backElelementWithBackground.getAttribute('data-responsive');
@@ -60,6 +60,7 @@ let resizeWindowImage = function(){
 }
 
 let pastImage = function(){
+  console.log("past");
   if (backElelementWithBackground) {
     const imageUrl = backElelementWithBackground.getAttribute('data-image');
     backElelementWithBackground.style.backgroundImage = `url(${imageUrl})`;
@@ -71,13 +72,14 @@ let pastImage = function(){
 
 let chectSize = function(){
   if(window.innerWidth < 760){
+
     pastImage()
   } else {
     resizeWindowImage()
   }
 }
 
-
+chectSize();
 
 // hide/show header
 
