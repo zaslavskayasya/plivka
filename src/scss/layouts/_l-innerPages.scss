@@ -546,11 +546,11 @@
     }
     .partners-cards-wrap{
         flex-flow: wrap;
-        justify-content: space-around;
+        justify-content: center;
     }
     .partners-cards-wrap .partner-card{
         width: 300px;
-        margin-right: 30px;
+        margin: 15px 30px ;
     }
     .info-sence p, .info-sence a {
         font-size: 21px;
