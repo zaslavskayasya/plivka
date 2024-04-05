@@ -55,8 +55,11 @@ console.log(backElelementWithBackground);
 
 let resizeWindowImage = function(){
   console.log("resize");
-  const imageResponsive = backElelementWithBackground.getAttribute('data-responsive');
-  backElelementWithBackground.style.backgroundImage = `url(${imageResponsive})`;
+  if(backElelementWithBackground){
+
+    const imageResponsive = backElelementWithBackground.getAttribute('data-responsive');
+    backElelementWithBackground.style.backgroundImage = `url(${imageResponsive})`;
+  }
 }
 
 let pastImage = function(){
