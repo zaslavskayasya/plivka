@@ -383,7 +383,62 @@
 
 }
 
+#player{
+    iframe{
+        height: 100%;
+    }
+    &:hover{
+        .ytp-chrome-top, .ytp-chrome-bottom{
+            opacity: 0;
+        }
+    }
+}
 
+.ytp-chrome-top, .ytp-chrome-bottom,
+.ytp-chrome-top:hover, .ytp-chrome-bottom:hover{
+    opacity: 0;
+}
+.ytp-hide-controls:not(.ytp-mweb-player) .ytp-watermark{
+    opacity: 0;
+}
+// .video-container {
+//     position: relative;
+//     width: 100%;
+//     padding-bottom: 56.25%; /* 16:9 aspect ratio */
+//     overflow: hidden;
+//   }
+  
+
+#player {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    padding-bottom: 56.25%;
+}
+
+  .ytp-chrome-top {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+.ytp-watermark {
+    visibility: hidden !important;
+    display: none !important;
+  }
+  
+  /* Приховати елементи управління */
+  .ytp-chrome-top,
+  .ytp-chrome-bottom {
+    display: none !important;
+  }
+
+.html5-video-container{
+    video{
+        height: 100%!important;
+    }
+}
 
 /// *******  FORM   ******* ///
 
@@ -395,7 +450,7 @@
     button{
         width: 256px;
         display: block;
-        margin: 0 auto;    
+        margin: 50px auto 0;    
     }
     
     // flex-direction: column;

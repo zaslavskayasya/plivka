@@ -92,3 +92,41 @@ $(document).ready(function(){
 $(function(){
   $("#phone").mask("+48(99) 999-9999");
 });
+
+
+// var tag = document.createElement('script');
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// var player;
+// function onYouTubeIframeAPIReady() {
+//   player = new YT.Player('player', {
+//     videoId: 'xQFVRC_qsv8',
+//     playerVars: {
+//       'autoplay': 1,
+//       'controls': 0,
+//       'loop': true,
+//       'showinfo': 0,
+//       'modestbranding': 0,
+//       'disablekb': 1,
+//       'rel': 0,
+//       'mute': 1,
+      
+//     },
+//     events: {
+//       'onReady': onPlayerReady,
+//       'onStateChange': onPlayerStateChange
+//     }
+//   });
+// }
+
+// function onPlayerReady(event) {
+//   event.target.mute();
+// }
+
+// function onPlayerStateChange(event) {
+//   if (event.data == YT.PlayerState.ENDED) {
+//     player.playVideo(); // Почати відтворення відео знову, коли воно закінчується
+//   }
+// }
