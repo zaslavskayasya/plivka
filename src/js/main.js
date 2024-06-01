@@ -93,37 +93,37 @@ $(function(){
   $("#phone").mask("+48(99) 999-9999");
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const mainContent = document.querySelector('.main-content.main-page');
+  const vimeoPlayer = document.getElementById('vimeo-player');
+  const placeholderImageSrc = mainContent.getAttribute('data-placeholder-image');
+  let videoSrc;
+
+  if (!placeholderImageSrc) {
+    return;
+  }
 
 
+  function replaceVideoWithImage() {
+      const iframe = vimeoPlayer.querySelector('iframe');
+      if (window.innerWidth < 760) {
+          if (iframe) {
+              videoSrc = iframe.src;
+              iframe.remove();
+              mainContent.style.backgroundImage = `url(${placeholderImageSrc})`;
+          }
+      } else {
+          if (!vimeoPlayer.querySelector('iframe') && videoSrc) {
+              vimeoPlayer.innerHTML = `
+                  <iframe src="${videoSrc}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+              mainContent.style.backgroundImage = '';
+          }
+      }
+  }
 
-const mainContent = document.querySelector('.main-content.main-page');
-const youtubeIframe = document.getElementById('youtube_iframe');
-const placeholderImageSrc = mainContent.getAttribute('data-placeholder-image');
-let videoSrc = document.getElementById('player').src;
-
-function replaceVideoWithImage() {
-    if (window.innerWidth < 760) {
-        const iframe = document.getElementById('player');
-        if (iframe) {
-            videoSrc = iframe.src;
-            iframe.remove();
-            mainContent.style.backgroundImage = `url(${placeholderImageSrc})`;
-        }
-    } else {
-        const iframe = document.getElementById('player');
-        if (!iframe) {
-            youtubeIframe.innerHTML = `
-                <iframe id="player" src="${videoSrc}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-            mainContent.style.backgroundImage = '';
-        }
-    }
-}
-
-window.addEventListener('load', replaceVideoWithImage);
-window.addEventListener('resize', replaceVideoWithImage);
-
-
-
+  window.addEventListener('load', replaceVideoWithImage);
+  window.addEventListener('resize', replaceVideoWithImage);
+});
 
 // var tag = document.createElement('script');
 // tag.src = "https://www.youtube.com/iframe_api";

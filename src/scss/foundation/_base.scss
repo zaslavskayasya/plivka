@@ -441,9 +441,10 @@ h4.h4.centered-header{
 
 .pros-percent{
   color: #216BDC;
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 30px;
+  word-break: break-word;
 }
 
 .illustration-box{
@@ -548,6 +549,29 @@ ul.breadcrumb a:hover {
 
 .only-mobile{
 
+}
+
+
+.langs-block.langs-mobile{
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 30px;
+  max-width: 200px;
+  li.langs-item {
+    color: #474747;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    &:hover{
+      color: #000;
+      text-shadow: 0px 0px 1px #000;   
+    }
+  }
 }
 
 .only-desctop{
@@ -718,6 +742,9 @@ ul.breadcrumb a:hover {
   .padding-l{
     padding-left: 120px;
   }
+  .langs-block.langs-mobile{ 
+    display: none;
+  }
 }
 
 @media screen and (min-width: 960px){
@@ -824,10 +851,8 @@ ul.breadcrumb a:hover {
   top: -25px
   }
   .pros-list .pros-image-wrap {
-
     height: 92px;
     min-width: 90px;
-    // margin-bottom: 50px;
     margin: 0 auto 50px;
   }
   .pros-list.simple {
@@ -837,7 +862,7 @@ ul.breadcrumb a:hover {
     }
     .pros-text{
       font-weight: 800;
-      font-size: 18px;
+      font-size: 20px;
       max-width: 99%;
     }
   }
@@ -846,12 +871,12 @@ ul.breadcrumb a:hover {
     .pros-text{
       font-size: 16px;
       font-weight: 800;
-      font-size: 18px;
+      font-size: 20px;
       max-width: 99%;
     }
     .pros-item{
       width: 219px;
-      height: 193px;
+      height: auto;
       padding: 55px 30px 55px 30px;
       &:before{
         width: 168px;
