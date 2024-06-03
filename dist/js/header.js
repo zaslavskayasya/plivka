@@ -46,43 +46,44 @@ elementO.addEventListener('touchend', function (e) {
 
 /// header images
 
-const backElelementWithBackground = document.querySelector('[data-image]');
-console.log(backElelementWithBackground);
+// const backElelementWithBackground = document.querySelector('[data-image]');
+// console.log(backElelementWithBackground);
 
-// if(backElelementWithBackground!=null){
+// // if(backElelementWithBackground!=null){
 
+// // }
+
+// let resizeWindowImage = function(){
+//   console.log("resize");
+//   if(backElelementWithBackground){
+
+//     const imageResponsive = backElelementWithBackground.getAttribute('data-responsive');
+//     backElelementWithBackground.style.backgroundImage = `url(${imageResponsive})`;
+//   }
 // }
 
-let resizeWindowImage = function(){
-  console.log("resize");
-  if(backElelementWithBackground){
-
-    const imageResponsive = backElelementWithBackground.getAttribute('data-responsive');
-    backElelementWithBackground.style.backgroundImage = `url(${imageResponsive})`;
-  }
-}
-
-let pastImage = function(){
-  console.log("past");
-  if (backElelementWithBackground) {
-    const imageUrl = backElelementWithBackground.getAttribute('data-image');
-    backElelementWithBackground.style.backgroundImage = `url(${imageUrl})`;
-  } else {
-    console.error('there is no such element ');
-  }
-}
+// let pastImage = function(){
+//   if (backElelementWithBackground) {
+//     const imageUrl = backElelementWithBackground.getAttribute('data-image');
+//     backElelementWithBackground.style.backgroundImage = `url(${imageUrl})`;
+//   } else {
+//     return;
+//     console.error('there is no such element ');
+//   }
+// }
 
 
-let chectSize = function(){
-  if(window.innerWidth < 760){
+// let chectSize = function(){
+//   if(window.innerWidth < 760){
+//     pastImage();
+//     console.log('it is mobile')
+//   } else {
+//     resizeWindowImage();
+//     console.log('it is NO mobile')
+//   }
+// }
 
-    pastImage()
-  } else {
-    resizeWindowImage()
-  }
-}
-
-chectSize();
+// chectSize();
 
 // hide/show header
 

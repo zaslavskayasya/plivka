@@ -93,37 +93,107 @@ $(function(){
   $("#phone").mask("+48(99) 999-9999");
 });
 
+
 document.addEventListener("DOMContentLoaded", function() {
   const mainContent = document.querySelector('.main-content.main-page');
   const vimeoPlayer = document.getElementById('vimeo-player');
   const placeholderImageSrc = mainContent.getAttribute('data-placeholder-image');
+  const backElementWithBackground = document.querySelector('[data-image]');
   let videoSrc;
 
-  if (!placeholderImageSrc) {
-    return;
-  }
-
-
   function replaceVideoWithImage() {
-      const iframe = vimeoPlayer.querySelector('iframe');
-      if (window.innerWidth < 760) {
-          if (iframe) {
-              videoSrc = iframe.src;
-              iframe.remove();
-              mainContent.style.backgroundImage = `url(${placeholderImageSrc})`;
-          }
-      } else {
-          if (!vimeoPlayer.querySelector('iframe') && videoSrc) {
-              vimeoPlayer.innerHTML = `
-                  <iframe src="${videoSrc}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-              mainContent.style.backgroundImage = '';
-          }
+    if (!placeholderImageSrc) {
+      return;
+    }
+
+    const iframe = vimeoPlayer.querySelector('iframe');
+    if (window.innerWidth < 760) {
+      if (iframe) {
+        videoSrc = iframe.src;
+        iframe.remove();
+        mainContent.style.backgroundImage = `url(${placeholderImageSrc})`;
+        mainContent.style.visibility = 'visible';
+        vimeoPlayer.style.display = 'none';
       }
+    } else {
+      if (!vimeoPlayer.querySelector('iframe') && videoSrc) {
+        vimeoPlayer.innerHTML = `
+          <iframe src="${videoSrc}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+        mainContent.style.backgroundImage = '';
+        mainContent.style.visibility = 'visible';
+        vimeoPlayer.style.display = 'block';
+      }
+    }
   }
 
-  window.addEventListener('load', replaceVideoWithImage);
-  window.addEventListener('resize', replaceVideoWithImage);
+  function resizeWindowImage() {
+    if (backElementWithBackground) {
+      const imageResponsive = backElementWithBackground.getAttribute('data-responsive');
+      backElementWithBackground.style.backgroundImage = `url(${imageResponsive})`;
+    }
+  }
+
+  function pastImage() {
+    if (backElementWithBackground) {
+      const imageUrl = backElementWithBackground.getAttribute('data-image');
+      backElementWithBackground.style.backgroundImage = `url(${imageUrl})`;
+    } else {
+      console.error('There is no such element');
+    }
+  }
+
+  function checkSize() {
+    if (window.innerWidth < 760) {
+      pastImage();
+      replaceVideoWithImage();
+      console.log('It is mobile');
+    } else {
+      resizeWindowImage();
+      replaceVideoWithImage();
+      console.log('It is not mobile');
+    }
+  }
+
+  window.addEventListener('resize', checkSize);
+
+  // Ensure initial load replaces the video if necessary
+  checkSize();
 });
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const mainContent = document.querySelector('.main-content.main-page');
+//   const vimeoPlayer = document.getElementById('vimeo-player');
+//   const placeholderImageSrc = mainContent.getAttribute('data-placeholder-image');
+//   let videoSrc;
+
+//   if (!placeholderImageSrc) {
+//     return;
+//   }
+
+
+//   function replaceVideoWithImage() {
+//       const iframe = vimeoPlayer.querySelector('iframe');
+//       if (window.innerWidth < 760) {
+//           if (iframe) {
+//               videoSrc = iframe.src;
+//               iframe.remove();
+//               mainContent.style.backgroundImage = `url(${placeholderImageSrc})`;
+//           }
+//       } else {
+//           if (!vimeoPlayer.querySelector('iframe') && videoSrc) {
+//               vimeoPlayer.innerHTML = `
+//                   <iframe src="${videoSrc}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+//               mainContent.style.backgroundImage = '';
+//           }
+//       }
+//   }
+
+//   window.addEventListener('load', replaceVideoWithImage);
+//   window.addEventListener('resize', replaceVideoWithImage);
+// });
 
 // var tag = document.createElement('script');
 // tag.src = "https://www.youtube.com/iframe_api";
